@@ -9,9 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500&family=Noto+Serif+SC:wght@300;400;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --noir:#0D0B09; --noir2:#17120F; --panel:rgba(52,34,24,.9);
-  --ivory:#F6F1E8; --ink:#1B1512;
-  --gold:#C8A45C; --gold-soft:#B08A3E;
+  --noir:#0D0B09; --noir2:#161210; --panel:rgba(52,34,24,.9);
+  --ivory:#F4F0EA; --ink:#1A1513;
+  --gold:#B69E6E; --gold-soft:#9D8451;
   --mist:rgba(244,233,219,.55); --hair:rgba(244,233,219,.16);
   --s1:#3B2317;--s2:#5A3722;--s3:#7C4E2E;--s4:#8B5A3C;--s5:#9A653C;--s6:#B67F4E;--s7:#CE9A64;--s8:#E0B583;--s9:#F0D5AC;
   --spectrum:linear-gradient(90deg,var(--s1),var(--s2),var(--s3),var(--s5),var(--s6),var(--s7),var(--s8),var(--s9));
@@ -24,7 +24,7 @@
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{height:100%}
 body{
-  background:#EAE3D4; color:var(--ink); font-family:var(--bcn); font-weight:300;
+  background:#E8E2D6; color:var(--ink); font-family:var(--bcn); font-weight:300;
   display:flex; align-items:center; justify-content:center; overflow:hidden;
 }
 body::before{content:"";position:fixed;inset:0;background:radial-gradient(60% 50% at 20% 0%,rgba(255,252,244,.9),transparent 60%),radial-gradient(50% 45% at 85% 100%,rgba(70,54,38,.12),transparent 60%)}
@@ -36,7 +36,7 @@ input{font-family:inherit}
 /* ---------- device frame ---------- */
 #app{
   position:relative; width:min(440px,100vw); height:min(920px,100svh);
-  background:#FBF7EF; overflow:hidden; display:flex; flex-direction:column;
+  background:#F9F6F1; overflow:hidden; display:flex; flex-direction:column;
   box-shadow:0 60px 120px -40px rgba(60,45,30,.35);
 }
 @media (min-width:480px) and (min-height:960px){ #app{border-radius:38px;border:1px solid rgba(200,164,92,.25)} }
@@ -53,8 +53,8 @@ input{font-family:inherit}
 #topbar .brand em{color:var(--gold);font-style:italic}
 #topbar .ctx{font-family:var(--util);font-size:10px;letter-spacing:.26em;color:var(--mist);text-transform:uppercase}
 #topbar.light{background:linear-gradient(rgba(251,247,240,.92),rgba(251,247,240,0))}
-#topbar.light .brand{color:#241C15}
-#topbar.light .brand em{color:#A8862F}
+#topbar.light .brand{color:#221C17}
+#topbar.light .brand em{color:#937D44}
 #topbar.light .ctx{color:rgba(36,28,21,.5)}
 
 /* ---------- screens ---------- */
@@ -65,8 +65,8 @@ input{font-family:inherit}
 .scroll::-webkit-scrollbar{display:none}
 
 /* ---------- shared ui ---------- */
-.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--util);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:#8C6F35}
-.eyebrow::before{content:"";width:26px;height:1px;background:#8C6F35}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--util);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:#7D6A44}
+.eyebrow::before{content:"";width:26px;height:1px;background:#7D6A44}
 .btn{
   font-family:var(--util);font-size:13px;letter-spacing:.22em;text-transform:uppercase;
   padding:16px 30px;border-radius:40px;transition:all .4s ease;text-align:center;
@@ -86,26 +86,26 @@ input{font-family:inherit}
 .hrow::-webkit-scrollbar{display:none}
 
 /* ---------- welcome (homepage · light) ---------- */
-#sc-welcome{background:linear-gradient(158deg,#20140F 0%,#3A2416 22%,#5E3A24 43%,#8A5636 59%,#5E3A24 78%,#2E1D14 100%);color:#F6ECDE;text-align:center}
+#sc-welcome{background:linear-gradient(158deg,#1D1512 0%,#34251C 22%,#543C2E 43%,#7C5944 59%,#543C2E 78%,#2A1E18 100%);color:#F2EBE2;text-align:center}
 /* animated background: soft light + drifting shadows, LVMH texture */
 .wbg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
 .wbg .aura{position:absolute;border-radius:50%;filter:blur(64px)}
-.wbg .a1{width:120%;aspect-ratio:1;left:-30%;top:-34%;background:radial-gradient(circle,rgba(232,193,140,.24),transparent 62%);animation:wdrift1 19s ease-in-out infinite alternate}
-.wbg .a2{width:110%;aspect-ratio:1;right:-38%;bottom:-30%;background:radial-gradient(circle,rgba(206,158,98,.18),transparent 60%);animation:wdrift2 23s ease-in-out infinite alternate}
-.wbg .a3{width:95%;aspect-ratio:1;left:-32%;bottom:-14%;background:radial-gradient(circle,rgba(184,134,84,.14),transparent 60%);animation:wdrift1 27s ease-in-out infinite alternate-reverse}
+.wbg .a1{width:120%;aspect-ratio:1;left:-30%;top:-34%;background:radial-gradient(circle,rgba(214,190,158,.24),transparent 62%);animation:wdrift1 19s ease-in-out infinite alternate}
+.wbg .a2{width:110%;aspect-ratio:1;right:-38%;bottom:-30%;background:radial-gradient(circle,rgba(184,156,120,.18),transparent 60%);animation:wdrift2 23s ease-in-out infinite alternate}
+.wbg .a3{width:95%;aspect-ratio:1;left:-32%;bottom:-14%;background:radial-gradient(circle,rgba(164,134,104,.14),transparent 60%);animation:wdrift1 27s ease-in-out infinite alternate-reverse}
 @keyframes wdrift1{to{transform:translate(8%,6%)}}
 @keyframes wdrift2{to{transform:translate(-7%,-6%)}}
 .wbg .blinds{position:absolute;left:-55%;top:-55%;width:210%;height:210%;transform:rotate(-16deg);filter:blur(12px);opacity:.55;
-  background:repeating-linear-gradient(90deg,rgba(244,214,164,.07) 0 30px,transparent 30px 100px);
+  background:repeating-linear-gradient(90deg,rgba(228,210,180,.07) 0 30px,transparent 30px 100px);
   animation:wblinds 36s ease-in-out infinite alternate}
 @keyframes wblinds{to{transform:rotate(-16deg) translateX(64px)}}
 #wParticles{position:absolute;inset:0;width:100%;height:100%}
 .wbg .sheen{position:absolute;left:50%;top:50%;width:260%;aspect-ratio:1;transform:translate(-50%,-50%);filter:blur(9px);
-  background:conic-gradient(from 0deg,transparent 0 40deg,rgba(128,100,64,.05) 56deg,rgba(80,62,44,.035) 68deg,transparent 92deg,transparent 200deg,rgba(150,118,70,.04) 224deg,transparent 250deg);
+  background:conic-gradient(from 0deg,transparent 0 40deg,rgba(115,98,77,.05) 56deg,rgba(73,62,51,.035) 68deg,transparent 92deg,transparent 200deg,rgba(134,115,86,.04) 224deg,transparent 250deg);
   animation:wspin 52s linear infinite}
 @keyframes wspin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 .wbg .dust{position:absolute;bottom:-3%;left:var(--x);width:var(--s);height:var(--s);border-radius:50%;opacity:0;
-  background:radial-gradient(circle,rgba(154,120,54,.8),rgba(154,120,54,0) 70%);
+  background:radial-gradient(circle,rgba(134,114,74,.8),rgba(134,114,74,0) 70%);
   animation:wrise var(--t) linear infinite;animation-delay:var(--d)}
 @keyframes wrise{0%{transform:translateY(0) translateX(0);opacity:0}12%{opacity:.6}55%{opacity:.3;transform:translateY(-520px) translateX(10px)}100%{transform:translateY(-960px) translateX(-6px);opacity:0}}
 .wbg::after{content:"";position:absolute;inset:0;opacity:.045;
@@ -120,24 +120,24 @@ input{font-family:inherit}
 .w-hero>*:nth-child(4){animation-delay:.65s}
 .w-hero>*:nth-child(5){animation-delay:.85s}
 @keyframes win{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-#sc-welcome h1{font-family:var(--den);font-weight:400;font-size:58px;letter-spacing:.14em;text-transform:uppercase;line-height:1.05;color:#FBF4E9;text-shadow:0 2px 24px rgba(20,12,8,.4)}
+#sc-welcome h1{font-family:var(--den);font-weight:400;font-size:58px;letter-spacing:.14em;text-transform:uppercase;line-height:1.05;color:#F8F3EC;text-shadow:0 2px 24px rgba(20,12,8,.4)}
 #sc-welcome .line{width:150px;height:2px;background:var(--spectrum);margin:26px auto;border-radius:2px}
 #sc-welcome .q{font-family:var(--dcn);font-weight:300;font-size:19px;letter-spacing:.12em}
-#sc-welcome .sub{font-family:var(--den);font-style:italic;font-size:14px;letter-spacing:.12em;color:#E7CC92;margin-top:14px}
+#sc-welcome .sub{font-family:var(--den);font-style:italic;font-size:14px;letter-spacing:.12em;color:#D9C7A0;margin-top:14px}
 .w-actions{display:flex;flex-direction:column;gap:12px;margin-top:34px;width:100%;max-width:280px}
 #sc-welcome .btn-gold{box-shadow:0 16px 32px -14px rgba(160,125,55,.5)}
 #sc-welcome .skip{font-family:var(--util);font-size:11px;letter-spacing:.24em;color:rgba(246,236,222,.72);text-transform:uppercase;padding:8px}
-#sc-welcome .skip:hover{color:#FBF4E9}
+#sc-welcome .skip:hover{color:#F8F3EC}
 .w-cue{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);opacity:0;animation:wfade 1s var(--ease) 1.3s forwards}
 @keyframes wfade{to{opacity:1}}
-.w-cue::after{content:"";display:block;width:1px;height:38px;background:linear-gradient(#A8862F,transparent);animation:wcue 2.2s ease-in-out infinite}
+.w-cue::after{content:"";display:block;width:1px;height:38px;background:linear-gradient(#937D44,transparent);animation:wcue 2.2s ease-in-out infinite}
 @keyframes wcue{0%,100%{transform:scaleY(.3);transform-origin:top;opacity:.35}50%{transform:scaleY(1);opacity:.9}}
 .w-sec{padding:48px 30px;border-top:1px solid rgba(246,236,222,.16);text-align:left}
-#sc-welcome .eyebrow{color:#E7CC92}
-#sc-welcome .eyebrow::before{background:#E7CC92}
+#sc-welcome .eyebrow{color:#D9C7A0}
+#sc-welcome .eyebrow::before{background:#D9C7A0}
 .mod-line{display:flex;gap:16px;padding:15px 2px;border-bottom:1px solid rgba(246,236,222,.14);align-items:baseline}
 .mod-line:last-child{border-bottom:none}
-.mod-num{font-family:var(--den);font-style:italic;color:#E7CC92;font-size:13px;letter-spacing:.16em;flex:0 0 26px}
+.mod-num{font-family:var(--den);font-style:italic;color:#D9C7A0;font-size:13px;letter-spacing:.16em;flex:0 0 26px}
 .mod-en{font-family:var(--den);font-size:18px;letter-spacing:.05em;font-weight:500;font-style:normal;flex:1}
 .w-end{padding:48px 30px calc(46px + env(safe-area-inset-bottom));border-top:1px solid rgba(246,236,222,.16);display:flex;flex-direction:column;gap:16px;align-items:center}
 .w-line{font-family:var(--dcn);font-weight:300;font-size:18px;line-height:2;letter-spacing:.1em}
@@ -148,23 +148,23 @@ input{font-family:inherit}
 .cam-note{font-size:11.5px;color:var(--mist);line-height:1.9;padding:0 10px}
 /* homepage: bolder type */
 #sc-welcome h1{font-weight:700}
-#sc-welcome .q{font-weight:600;color:#F6ECDE}
-#sc-welcome .btn{font-weight:500}
+#sc-welcome .q{font-weight:600;color:#F2EBE2}
+#sc-welcome .btn:not(.btn-gold){font-weight:500}
 #sc-welcome .skip{font-weight:600;color:rgba(246,236,222,.78)}
 #sc-welcome .eyebrow{font-weight:500}
 #sc-welcome .mod-en{font-weight:600}
 #sc-welcome .mod-num{font-weight:500}
-#sc-welcome .w-line{font-weight:600;color:#F6ECDE}
+#sc-welcome .w-line{font-weight:600;color:#F2EBE2}
 #sc-welcome .w-note{font-weight:500}
 
 /* ---------- stage (camera / demo visage) ---------- */
-.stage{position:absolute;inset:0;background:#100D0B;overflow:hidden}
+.stage{position:absolute;inset:0;background:#0F0D0C;overflow:hidden}
 .stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1);filter:var(--grade,none);transition:filter .8s ease}
 .demo-visage{position:absolute;inset:0;display:none;filter:var(--grade,none);transition:filter .8s ease;
   background:
    radial-gradient(90% 60% at 50% 108%,rgba(60,40,28,.55),transparent 70%),
-   radial-gradient(46% 34% at 50% 47%, var(--dskin-hi,#B27C52) 0%, var(--dskin,#8B5A3C) 55%, transparent 74%),
-   radial-gradient(120% 80% at 50% 0%,rgba(200,164,92,.1),transparent 60%), #16110D;
+   radial-gradient(46% 34% at 50% 47%, var(--dskin-hi,#A27E62) 0%, var(--dskin,#8B5A3C) 55%, transparent 74%),
+   radial-gradient(120% 80% at 50% 0%,rgba(200,164,92,.1),transparent 60%), #15110E;
 }
 .photo-face{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;filter:var(--grade,none);transition:filter .8s ease}
 .mk-canvas{position:absolute;inset:0;width:100%;height:100%;display:none;pointer-events:none}
@@ -198,13 +198,13 @@ input{font-family:inherit}
 .mk-found{inset:0;border-radius:50%;mix-blend-mode:soft-light;opacity:var(--found-i,.5);
   background:radial-gradient(50% 50% at 50% 50%, var(--found-c,rgba(255,220,180,.5)) 0%, transparent 78%)}
 .mk-eye{width:27%;height:10%;top:34%;mix-blend-mode:multiply;filter:blur(3px);opacity:var(--eye-i,.4);
-  background:radial-gradient(closest-side, var(--eye-c,#7C5A3C), transparent 82%)}
+  background:radial-gradient(closest-side, var(--eye-c,#755A43), transparent 82%)}
 .mk-eye.l{left:22%}.mk-eye.r{right:22%}
 .mk-blush{width:23%;height:13%;top:52.5%;mix-blend-mode:multiply;filter:blur(5px);opacity:calc(var(--blush-i,.35)*.85);
-  background:radial-gradient(closest-side, var(--blush-c,#D67666), transparent 80%)}
+  background:radial-gradient(closest-side, var(--blush-c,#C38479), transparent 80%)}
 .mk-blush.l{left:17%}.mk-blush.r{right:17%}
 .mk-lip{width:24%;height:8.5%;left:38%;top:70.5%;mix-blend-mode:multiply;filter:blur(1.6px);opacity:var(--lip-i,.6);
-  background:radial-gradient(closest-side, var(--lip-c,#B03A46) 30%, transparent 88%)}
+  background:radial-gradient(closest-side, var(--lip-c,#9C4E56) 30%, transparent 88%)}
 .mk-glow{width:12%;height:24%;left:44%;top:34%;mix-blend-mode:soft-light;filter:blur(4px);opacity:var(--glow-i,.3);
   background:radial-gradient(closest-side, rgba(255,244,224,.95), transparent 80%)}
 .mk-glow.c1{width:14%;height:8%;left:16%;top:46%}
@@ -246,7 +246,7 @@ input{font-family:inherit}
 .mirror-ui{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}
 .scene-row{pointer-events:auto;margin:calc(60px + env(safe-area-inset-top)) 16px 0;flex-wrap:wrap;justify-content:center;row-gap:6px;overflow:visible}
 .look-name{margin-top:10px;width:100%;text-align:center;pointer-events:none}
-.look-name b{font-family:var(--dcn);font-weight:400;font-size:15px;letter-spacing:.22em;color:#F6F1E8;background:rgba(13,11,9,.45);padding:7px 18px;border-radius:20px;backdrop-filter:blur(6px)}
+.look-name b{font-family:var(--dcn);font-weight:400;font-size:15px;letter-spacing:.22em;color:#F4F0EA;background:rgba(13,11,9,.45);padding:7px 18px;border-radius:20px;backdrop-filter:blur(6px)}
 .mirror-top{pointer-events:none}
 .mirror-dock{pointer-events:auto;background:linear-gradient(transparent,rgba(22,14,10,.96) 34%);padding:60px 16px calc(86px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:14px}
 .dock-tabs{display:flex;gap:8px;flex-wrap:wrap;row-gap:6px}
@@ -260,7 +260,7 @@ input{font-family:inherit}
 .round-btn svg{width:21px;height:21px;stroke:var(--ink);fill:none;stroke-width:1.5}
 .round-btn.gold{background:var(--gold);border-color:var(--gold)}
 .round-btn.gold svg{stroke:var(--noir)}
-.round-btn .lb{position:absolute;top:100%;margin-top:5px;font-family:var(--util);font-size:9px;letter-spacing:.14em;color:#F6F1E8;text-shadow:0 1px 8px rgba(0,0,0,.55);white-space:nowrap;left:50%;transform:translateX(-50%)}
+.round-btn .lb{position:absolute;top:100%;margin-top:5px;font-family:var(--util);font-size:9px;letter-spacing:.14em;color:#F4F0EA;text-shadow:0 1px 8px rgba(0,0,0,.55);white-space:nowrap;left:50%;transform:translateX(-50%)}
 .panel-body{display:none;flex-direction:column;gap:14px}
 .panel-body.on{display:flex}
 .look-row .chip{padding:10px 18px}
@@ -269,7 +269,7 @@ input{font-family:inherit}
 .swatches{display:flex;gap:9px;flex:1;overflow-x:auto;scrollbar-width:none;padding:2px}
 .swatches::-webkit-scrollbar{display:none}
 .sw{width:27px;height:27px;border-radius:50%;border:1px solid rgba(36,28,21,.2);flex:0 0 auto;transition:transform .3s var(--ease),box-shadow .3s}
-.sw.on{box-shadow:0 0 0 2px #FBF7EF,0 0 0 3.5px var(--gold);transform:translateY(-2px)}
+.sw.on{box-shadow:0 0 0 2px #F9F6F1,0 0 0 3.5px var(--gold);transform:translateY(-2px)}
 input[type=range]{-webkit-appearance:none;appearance:none;flex:1;height:2px;background:linear-gradient(90deg,var(--gold) var(--v,50%),rgba(36,28,21,.18) var(--v,50%));border-radius:2px;outline-offset:6px}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:17px;height:17px;border-radius:50%;background:var(--ivory);border:4px solid var(--gold);cursor:pointer}
 input[type=range]::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:var(--ivory);border:4px solid var(--gold);cursor:pointer}
@@ -290,14 +290,14 @@ input[type=range]::-moz-range-thumb{width:12px;height:12px;border-radius:50%;bac
 .msgs{flex:1;overflow-y:auto;padding:6px 18px;display:flex;flex-direction:column;gap:12px;scrollbar-width:none}
 .msgs::-webkit-scrollbar{display:none}
 .msg{max-width:84%;padding:11px 16px;border-radius:15px;font-size:13.5px;line-height:1.75;animation:fadein .4s var(--ease)}
-.msg.u{align-self:flex-end;background:#241C15;color:#F6F1E8;border-bottom-right-radius:4px}
+.msg.u{align-self:flex-end;background:#221C17;color:#F4F0EA;border-bottom-right-radius:4px}
 .msg.a{align-self:flex-start;border:1px solid rgba(200,164,92,.4);background:rgba(200,164,92,.08);border-bottom-left-radius:4px}
 .msg.a .tag{display:block;font-family:var(--util);font-size:9px;letter-spacing:.26em;color:var(--gold);text-transform:uppercase;margin-bottom:5px}
 .sugg-row{padding:8px 16px}
 .cochat-input{display:flex;gap:10px;padding:10px 16px calc(16px + env(safe-area-inset-bottom))}
 .cochat-input input{
   flex:1;background:rgba(244,233,219,.08);border:1px solid var(--hair);border-radius:26px;
-  color:#F4E9DB;font-size:14px;padding:13px 20px;outline:none;transition:border-color .3s;
+  color:#F0E8DF;font-size:14px;padding:13px 20px;outline:none;transition:border-color .3s;
 }
 .cochat-input input:focus{border-color:var(--gold)}
 .cochat-input input::placeholder{color:rgba(36,28,21,.35)}
@@ -332,7 +332,7 @@ input[type=range]::-moz-range-thumb{width:12px;height:12px;border-radius:50%;bac
 
 /* ---------- passport ---------- */
 #sc-pass .scroll{padding:calc(66px + env(safe-area-inset-top)) 20px calc(96px + env(safe-area-inset-bottom))}
-.pass-id{background:linear-gradient(150deg,#1B1510,#0F0C0A 65%);border:1px solid rgba(200,164,92,.5);border-radius:18px;padding:20px;margin:12px 0 22px;position:relative;overflow:hidden;color:#F6F1E8}
+.pass-id{background:linear-gradient(150deg,#1A1511,#0E0C0B 65%);border:1px solid rgba(200,164,92,.5);border-radius:18px;padding:20px;margin:12px 0 22px;position:relative;overflow:hidden;color:#F4F0EA}
 .pass-id::before{content:"";position:absolute;inset:8px;border:1px solid rgba(200,164,92,.2);border-radius:12px;pointer-events:none}
 .pass-id .b{font-family:var(--den);font-size:12px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
 .pass-id .n{font-family:var(--den);font-size:24px;letter-spacing:.1em;margin:6px 0 12px}
@@ -341,7 +341,7 @@ input[type=range]::-moz-range-thumb{width:12px;height:12px;border-radius:50%;bac
 .pass-id .meta b{color:var(--ivory);font-weight:400}
 .looks-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .look-card{background:var(--panel);border:1px solid var(--hair);border-radius:14px;box-shadow:0 10px 24px -16px rgba(60,45,30,.35);overflow:hidden;animation:fadein .5s var(--ease)}
-.look-card .im{width:100%;aspect-ratio:3/3.6;object-fit:cover;display:block;background:#15100D}
+.look-card .im{width:100%;aspect-ratio:3/3.6;object-fit:cover;display:block;background:#14100E}
 .look-card .inf{padding:10px 12px}
 .look-card .nm{font-size:12.5px;font-weight:400}
 .look-card .mt{font-family:var(--util);font-size:9px;letter-spacing:.16em;color:var(--mist);text-transform:uppercase;margin-top:3px}
@@ -362,12 +362,12 @@ input[type=range]::-moz-range-thumb{width:12px;height:12px;border-radius:50%;bac
 .tab span{white-space:nowrap}
 .tab svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.5}
 .tab span{font-family:var(--util);font-size:9px;letter-spacing:.2em;text-transform:uppercase}
-.tab.on{color:#8C6F35}
+.tab.on{color:#7D6A44}
 
 /* ---------- toast ---------- */
 #toast{
   position:absolute;left:50%;bottom:110px;transform:translate(-50%,20px);z-index:80;
-  background:rgba(27,21,18,.92);color:#F6F1E8;font-size:12.5px;letter-spacing:.06em;
+  background:rgba(27,21,18,.92);color:#F4F0EA;font-size:12.5px;letter-spacing:.06em;
   padding:11px 22px;border-radius:24px;opacity:0;pointer-events:none;transition:all .45s var(--ease);
   max-width:82%;text-align:center;
 }
@@ -408,61 +408,61 @@ input[type=range]::-moz-range-thumb{width:12px;height:12px;border-radius:50%;bac
 }
 
 /* ===== SKIN THEME · all screens ===== */
-body{background:#20140F}
-#app{background:linear-gradient(180deg,#2E1D14,#20140F)}
+body{background:#1D1512}
+#app{background:linear-gradient(180deg,#2A1E18,#1D1512)}
 #topbar{background:linear-gradient(rgba(32,20,15,.9),rgba(32,20,15,0))}
-#topbar .brand{color:#F4E9DB}
-#topbar .brand em{color:#E7CC92}
+#topbar .brand{color:#F0E8DF}
+#topbar .brand em{color:#D9C7A0}
 #topbar .ctx{color:rgba(244,233,219,.55)}
-.screen{color:#F4E9DB}
-#sc-comm,#sc-pass{background:linear-gradient(172deg,#3A2416 0%,#20140F 100%)}
-.eyebrow{color:#E7CC92}
-.eyebrow::before{background:#E7CC92}
+.screen{color:#F0E8DF}
+#sc-comm,#sc-pass{background:linear-gradient(172deg,#34251C 0%,#1D1512 100%)}
+.eyebrow{color:#D9C7A0}
+.eyebrow::before{background:#D9C7A0}
 .sec-p{color:rgba(244,233,219,.62)}
-.chip{border-color:rgba(244,233,219,.42);color:#F4E9DB;background:rgba(38,24,17,.5);backdrop-filter:blur(6px);font-weight:600}
-.chip:not(.on):hover{border-color:#E7CC92;color:#FBF4E9}
-.chip.on{background:var(--gold);color:#241209;border-color:var(--gold)}
-.btn-line{border-color:rgba(244,233,219,.5);color:#F4E9DB;font-weight:600}
-.btn-line:hover{border-color:#E7CC92}
+.chip{border-color:rgba(244,233,219,.42);color:#F0E8DF;background:rgba(38,24,17,.5);backdrop-filter:blur(6px);font-weight:600}
+.chip:not(.on):hover{border-color:#D9C7A0;color:#F8F3EC}
+.chip.on{background:var(--gold);color:#1F140E;border-color:var(--gold)}
+.btn-line{border-color:rgba(244,233,219,.5);color:#F0E8DF;font-weight:600}
+.btn-line:hover{border-color:#D9C7A0}
 .round-btn{background:rgba(38,24,17,.62);border-color:rgba(244,233,219,.34)}
-.round-btn svg{stroke:#F4E9DB}
-.round-btn:hover{border-color:#E7CC92}
+.round-btn svg{stroke:#F0E8DF}
+.round-btn:hover{border-color:#D9C7A0}
 .round-btn .lb{color:rgba(244,233,219,.85);font-weight:600}
 input[type=range]{background:linear-gradient(90deg,var(--gold) var(--v,50%),rgba(244,233,219,.2) var(--v,50%))}
-input[type=range]::-webkit-slider-thumb{background:#FBF4E9}
-input[type=range]::-moz-range-thumb{background:#FBF4E9}
+input[type=range]::-webkit-slider-thumb{background:#F8F3EC}
+input[type=range]::-moz-range-thumb{background:#F8F3EC}
 .sw{border-color:rgba(244,233,219,.3)}
-.sw.on{box-shadow:0 0 0 2px #2A1B13,0 0 0 3.5px var(--gold)}
+.sw.on{box-shadow:0 0 0 2px #261C17,0 0 0 3.5px var(--gold)}
 .shade-dots button{border-color:rgba(244,233,219,.3)}
-.shade-dots button.on{box-shadow:0 0 0 2px #2A1B13,0 0 0 3.5px var(--gold)}
+.shade-dots button.on{box-shadow:0 0 0 2px #261C17,0 0 0 3.5px var(--gold)}
 .scan-item{color:rgba(244,233,219,.6)}
-.scan-item .tick{border-color:rgba(244,233,219,.32);color:#E7CC92}
-.scan-item.done{color:#F4E9DB}
+.scan-item .tick{border-color:rgba(244,233,219,.32);color:#D9C7A0}
+.scan-item.done{color:#F0E8DF}
 .scan-item.done .tick{border-color:var(--gold);background:rgba(216,190,126,.16)}
-.id-card{background:rgba(40,26,18,.82);border-color:rgba(216,190,126,.5);color:#F4E9DB}
-.id-head span{color:#E7CC92}
+.id-card{background:rgba(40,26,18,.82);border-color:rgba(216,190,126,.5);color:#F0E8DF}
+.id-head span{color:#D9C7A0}
 .id-main .t2{color:rgba(244,233,219,.6)}
 .id-swatch{border-color:rgba(244,233,219,.24)}
-.id-tag{color:#E7CC92;border-color:rgba(216,190,126,.5)}
-.cochat-head b i{color:#E7CC92}
+.id-tag{color:#D9C7A0;border-color:rgba(216,190,126,.5)}
+.cochat-head b i{color:#D9C7A0}
 .cochat-head button{color:rgba(244,233,219,.6)}
-.msg.u{background:var(--gold);color:#241209;font-weight:600}
-.msg.a .tag{color:#E7CC92}
+.msg.u{background:var(--gold);color:#1F140E;font-weight:600}
+.msg.a .tag{color:#D9C7A0}
 .chips i{border-color:rgba(244,233,219,.28)}
 .story-top .m{color:rgba(244,233,219,.55)}
 .story-orig{color:rgba(244,233,219,.55)}
-.cult{color:#E7CC92;border-color:rgba(216,190,126,.55)}
+.cult{color:#D9C7A0;border-color:rgba(216,190,126,.55)}
 .story-foot button{color:rgba(244,233,219,.55)}
-.story-foot button:hover{color:#F4E9DB}
-.story-foot button.liked{color:#E7CC92}
+.story-foot button:hover{color:#F0E8DF}
+.story-foot button.liked{color:#D9C7A0}
 .look-card .mt{color:rgba(244,233,219,.55)}
-.look-card .ops button{color:#E7CC92}
+.look-card .ops button{color:#D9C7A0}
 .empty{border-color:rgba(244,233,219,.3);color:rgba(244,233,219,.62)}
-.empty b{color:#F4E9DB}
+.empty b{color:#F0E8DF}
 #tabbar{background:rgba(28,17,12,.9);border-top-color:rgba(244,233,219,.14)}
 .tab{color:rgba(244,233,219,.5)}
-.tab.on{color:#E7CC92}
-#toast{background:#F4E9DB;color:#241209;font-weight:600}
+.tab.on{color:#D9C7A0}
+#toast{background:#F0E8DF;color:#1F140E;font-weight:600}
 .pass-id .meta{color:rgba(244,233,219,.62)}
 
 @media (prefers-reduced-motion:reduce){
@@ -476,70 +476,70 @@ input[type=range]::-moz-range-thumb{background:#FBF4E9}
 #sc-mirror:not(.phase-create) .side-btns{display:none}
 .flow-sheet{pointer-events:auto;background:linear-gradient(transparent 0%,rgba(24,15,11,.72) 12%,rgba(20,13,9,.98) 34%);padding:82px 22px calc(96px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:15px;max-height:100%;overflow-y:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .flow-sheet::-webkit-scrollbar{display:none}
-.flow-eyebrow{font-family:var(--util);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#E7CC92;font-weight:600;display:flex;align-items:center;gap:10px}
-.flow-eyebrow::before{content:"";width:22px;height:1px;background:#E7CC92}
-.flow-title{font-family:var(--dcn);font-weight:600;font-size:23px;letter-spacing:.05em;color:#FBF4E9;line-height:1.4}
+.flow-eyebrow{font-family:var(--util);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:#D9C7A0;font-weight:600;display:flex;align-items:center;gap:10px}
+.flow-eyebrow::before{content:"";width:22px;height:1px;background:#D9C7A0}
+.flow-title{font-family:var(--dcn);font-weight:600;font-size:23px;letter-spacing:.05em;color:#F8F3EC;line-height:1.4}
 .flow-title b{background:var(--spectrum);-webkit-background-clip:text;background-clip:text;color:transparent}
 .flow-sub{font-size:11.5px;color:rgba(244,233,219,.62);font-weight:500;letter-spacing:.02em;margin-top:-4px}
 /* emotion cards */
 .mood-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .mood{pointer-events:auto;text-align:left;border:1px solid rgba(244,233,219,.28);border-radius:14px;padding:15px 16px;background:rgba(52,34,24,.55);backdrop-filter:blur(6px);transition:all .35s ease;position:relative;overflow:hidden}
 .mood::before{content:"";position:absolute;left:0;top:0;height:100%;width:3px;background:var(--spectrum);transform:scaleY(0);transform-origin:top;transition:transform .4s var(--ease)}
-.mood:hover,.mood:active{border-color:#E7CC92;background:rgba(70,46,32,.85)}
+.mood:hover,.mood:active{border-color:#D9C7A0;background:rgba(70,46,32,.85)}
 .mood:hover::before{transform:scaleY(1)}
-.mood .mt{font-family:var(--dcn);font-weight:600;font-size:16px;letter-spacing:.03em;color:#FBF4E9}
+.mood .mt{font-family:var(--dcn);font-weight:600;font-size:16px;letter-spacing:.03em;color:#F8F3EC}
 .mood .mh{font-family:var(--util);font-size:9.5px;letter-spacing:.1em;color:rgba(36,28,21,.5);margin-top:5px}
 .mood-input{display:flex;gap:9px;margin-top:2px}
-.mood-input input{flex:1;background:rgba(244,233,219,.08);border:1px solid rgba(244,233,219,.3);border-radius:24px;color:#F4E9DB;font-size:13.5px;padding:12px 18px;outline:none}
-.mood-input input:focus{border-color:#A8862F}
+.mood-input input{flex:1;background:rgba(244,233,219,.08);border:1px solid rgba(244,233,219,.3);border-radius:24px;color:#F0E8DF;font-size:13.5px;padding:12px 18px;outline:none}
+.mood-input input:focus{border-color:#937D44}
 .mood-input input::placeholder{color:rgba(36,28,21,.4)}
 .mood-input .send{width:46px;height:46px;flex:0 0 auto}
 /* directions */
 .dir-list{display:flex;flex-direction:column;gap:10px}
 .dir{pointer-events:auto;text-align:left;display:flex;align-items:center;gap:14px;border:1px solid rgba(244,233,219,.28);border-radius:15px;padding:14px 16px;background:rgba(52,34,24,.6);backdrop-filter:blur(6px);transition:all .35s ease;opacity:0;transform:translateY(12px);animation:dirIn .5s var(--ease) forwards}
-.dir:hover{border-color:#E7CC92;background:rgba(70,46,32,.9)}
+.dir:hover{border-color:#D9C7A0;background:rgba(70,46,32,.9)}
 @keyframes dirIn{to{opacity:1;transform:none}}
 .dir-sw{display:flex;flex:0 0 auto}
-.dir-sw i{width:22px;height:22px;border-radius:50%;margin-left:-7px;border:1.5px solid #FFFDF8;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.dir-sw i{width:22px;height:22px;border-radius:50%;margin-left:-7px;border:1.5px solid #FEFCF9;box-shadow:0 1px 4px rgba(0,0,0,.15)}
 .dir-sw i:first-child{margin-left:0}
 .dir-txt{flex:1}
-.dir-name{font-family:var(--dcn);font-weight:600;font-size:16px;letter-spacing:.04em;color:#FBF4E9}
+.dir-name{font-family:var(--dcn);font-weight:600;font-size:16px;letter-spacing:.04em;color:#F8F3EC}
 .dir-desc{font-size:11.5px;color:rgba(244,233,219,.62);margin-top:3px;line-height:1.5}
-.dir-go{font-family:var(--util);font-size:18px;color:#E7CC92;flex:0 0 auto}
+.dir-go{font-family:var(--util);font-size:18px;color:#D9C7A0;flex:0 0 auto}
 .flow-back{align-self:center;font-family:var(--util);font-size:10.5px;letter-spacing:.2em;color:rgba(36,28,21,.5);text-transform:uppercase;padding:8px 4px;pointer-events:auto}
-.flow-back:hover{color:#241C15}
-.think{display:flex;align-items:center;gap:9px;justify-content:center;padding:8px;font-family:var(--util);font-size:11px;letter-spacing:.2em;color:#8C6F35;text-transform:uppercase}
+.flow-back:hover{color:#221C17}
+.think{display:flex;align-items:center;gap:9px;justify-content:center;padding:8px;font-family:var(--util);font-size:11px;letter-spacing:.2em;color:#7D6A44;text-transform:uppercase}
 .think i{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:blink 1.2s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:.2}50%{opacity:1}}
 .think i:nth-child(2){animation-delay:.2s}.think i:nth-child(3){animation-delay:.4s}
 /* what-if in create phase */
 .whatif-wrap{display:flex;flex-direction:column;gap:8px}
 .whatif-label{font-family:var(--util);font-size:10px;letter-spacing:.16em;color:rgba(36,28,21,.55);text-transform:uppercase;display:flex;align-items:center;gap:8px}
-.whatif-label b{font-family:var(--den);font-style:italic;font-weight:600;color:#A8862F;letter-spacing:.02em;text-transform:none;font-size:13px}
+.whatif-label b{font-family:var(--den);font-style:italic;font-weight:600;color:#937D44;letter-spacing:.02em;text-transform:none;font-size:13px}
 .whatif-row{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px}
 .whatif-row::-webkit-scrollbar{display:none}
-.whatif{flex:0 0 auto;border:1px dashed rgba(216,190,126,.6);border-radius:20px;padding:9px 15px;font-size:12px;font-weight:600;color:#EBD9AF;background:rgba(52,34,24,.5);transition:all .3s ease;white-space:nowrap}
-.whatif:hover{background:rgba(70,46,32,.85);border-style:solid;border-color:#E7CC92}
-.whatif::before{content:"✦ ";color:#A8862F}
+.whatif{flex:0 0 auto;border:1px dashed rgba(216,190,126,.6);border-radius:20px;padding:9px 15px;font-size:12px;font-weight:600;color:#E1D5B9;background:rgba(52,34,24,.5);transition:all .3s ease;white-space:nowrap}
+.whatif:hover{background:rgba(70,46,32,.85);border-style:solid;border-color:#D9C7A0}
+.whatif::before{content:"✦ ";color:#937D44}
 /* recipe modal */
-.recipe{position:absolute;inset:0;z-index:75;display:none;flex-direction:column;background:linear-gradient(172deg,#2E1D14,#180F0A);animation:fadein .4s var(--ease)}
+.recipe{position:absolute;inset:0;z-index:75;display:none;flex-direction:column;background:linear-gradient(172deg,#2A1E18,#16100C);animation:fadein .4s var(--ease)}
 .recipe.on{display:flex}
 .recipe-head{display:flex;align-items:center;justify-content:space-between;padding:calc(18px + env(safe-area-inset-top)) 22px 10px}
-.recipe-head b{font-family:var(--den);font-size:17px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#FBF4E9}
-.recipe-head b i{color:#E7CC92;font-style:italic}
+.recipe-head b{font-family:var(--den);font-size:17px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#F8F3EC}
+.recipe-head b i{color:#D9C7A0;font-style:italic}
 .recipe-head .x{font-size:24px;color:rgba(244,233,219,.6);line-height:1;padding:0 4px}
 .recipe-scroll{flex:1;overflow-y:auto;padding:4px 22px 18px;scrollbar-width:none}
 .recipe-scroll::-webkit-scrollbar{display:none}
 .recipe-expr{font-family:var(--dcn);font-size:15px;color:rgba(244,233,219,.75);text-align:center;margin:2px 0 8px}
-.recipe-expr b{color:#FBF4E9;font-weight:600}
+.recipe-expr b{color:#F8F3EC;font-weight:600}
 .face-map{width:100%;max-width:280px;margin:0 auto;display:block}
 .rp-list{display:flex;flex-direction:column;gap:1px;background:rgba(244,233,219,.12);border:1px solid rgba(244,233,219,.14);border-radius:14px;overflow:hidden;margin-top:14px}
 .rp{display:flex;align-items:center;gap:13px;padding:13px 15px;background:rgba(46,29,20,.92)}
-.rp-no{width:22px;height:22px;border-radius:50%;flex:0 0 auto;background:var(--gold);color:#241209;font-family:var(--util);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.rp-no{width:22px;height:22px;border-radius:50%;flex:0 0 auto;background:var(--gold);color:#1F140E;font-family:var(--util);font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center}
 .rp-dot{width:26px;height:26px;border-radius:50%;flex:0 0 auto;border:1px solid rgba(36,28,21,.15)}
 .rp-info{flex:1}
-.rp-zone{font-family:var(--util);font-size:9px;letter-spacing:.2em;color:#E7CC92;text-transform:uppercase}
-.rp-name{font-size:13.5px;font-weight:600;color:#FBF4E9;margin-top:2px}
+.rp-zone{font-family:var(--util);font-size:9px;letter-spacing:.2em;color:#D9C7A0;text-transform:uppercase}
+.rp-name{font-size:13.5px;font-weight:600;color:#F8F3EC;margin-top:2px}
 .rp-shade{font-family:var(--util);font-size:10.5px;letter-spacing:.04em;color:rgba(244,233,219,.6);flex:0 0 auto;text-align:right;max-width:34%}
 .recipe-actions{padding:14px 22px calc(22px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(244,233,219,.14)}
 .recipe-note{font-family:var(--util);font-size:9.5px;letter-spacing:.12em;color:rgba(36,28,21,.45);text-transform:uppercase;text-align:center}
@@ -553,29 +553,29 @@ input[type=range]::-moz-range-thumb{background:#FBF4E9}
 #sc-mirror.phase-create .mirror-scroll{overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
 #sc-mirror.phase-create #stageMirror{position:sticky;top:0;height:46vh;width:100%;z-index:1;flex:none;border-radius:0 0 24px 24px;box-shadow:0 16px 26px -18px rgba(0,0,0,.7)}
 #sc-mirror.phase-create #guideMirror{display:none}
-#sc-mirror.phase-create .mirror-ui{position:relative;inset:auto;opacity:1;pointer-events:auto;z-index:2;display:flex;flex-direction:column;gap:18px;justify-content:flex-start;padding:18px 16px calc(94px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(20,13,9,.55),#150E0A 8%)}
+#sc-mirror.phase-create .mirror-ui{position:relative;inset:auto;opacity:1;pointer-events:auto;z-index:2;display:flex;flex-direction:column;gap:18px;justify-content:flex-start;padding:18px 16px calc(94px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(20,13,9,.55),#130F0C 8%)}
 @media (max-height:680px){#sc-mirror.phase-create #stageMirror{height:42vh}}
 
 /* expression name + restart · overlaid on the mirror */
 .expr-bar{position:absolute;top:calc(14px + env(safe-area-inset-top));left:12px;right:12px;display:flex;justify-content:space-between;align-items:center;gap:9px;pointer-events:none;z-index:6}
 #sc-mirror:not(.phase-create) .expr-bar{display:none}
-.expr-name{pointer-events:auto;font-family:var(--dcn);font-weight:600;font-size:14px;letter-spacing:.1em;color:#FBF4E9;background:rgba(20,13,9,.5);backdrop-filter:blur(6px);padding:6px 14px;border-radius:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:58%;text-shadow:0 1px 5px rgba(0,0,0,.5)}
-.expr-restart{pointer-events:auto;font-family:var(--util);font-size:9.5px;letter-spacing:.14em;color:#FBF4E9;background:rgba(20,13,9,.5);backdrop-filter:blur(6px);padding:7px 13px;border-radius:20px;text-transform:uppercase;border:1px solid rgba(231,204,146,.5);white-space:nowrap}
+.expr-name{pointer-events:auto;font-family:var(--dcn);font-weight:600;font-size:14px;letter-spacing:.1em;color:#F8F3EC;background:rgba(20,13,9,.5);backdrop-filter:blur(6px);padding:6px 14px;border-radius:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:58%;text-shadow:0 1px 5px rgba(0,0,0,.5)}
+.expr-restart{pointer-events:auto;font-family:var(--util);font-size:9.5px;letter-spacing:.14em;color:#F8F3EC;background:rgba(20,13,9,.5);backdrop-filter:blur(6px);padding:7px 13px;border-radius:20px;text-transform:uppercase;border:1px solid rgba(231,204,146,.5);white-space:nowrap}
 .expr-restart:active{background:rgba(231,204,146,.25)}
 
 /* scene indicator (swipe) */
 .scene-ind{position:absolute;left:0;right:0;bottom:16px;display:flex;flex-direction:column;align-items:center;gap:7px;pointer-events:none;z-index:5}
 #sc-mirror:not(.phase-create) .scene-ind{display:none}
-.scene-name{font-family:var(--dcn);font-weight:600;font-size:15px;letter-spacing:.12em;color:#FBF4E9;background:rgba(20,13,9,.5);backdrop-filter:blur(6px);padding:6px 16px;border-radius:20px;text-shadow:0 1px 6px rgba(0,0,0,.55)}
+.scene-name{font-family:var(--dcn);font-weight:600;font-size:15px;letter-spacing:.12em;color:#F8F3EC;background:rgba(20,13,9,.5);backdrop-filter:blur(6px);padding:6px 16px;border-radius:20px;text-shadow:0 1px 6px rgba(0,0,0,.55)}
 .scene-hint{font-family:var(--util);font-size:8.5px;letter-spacing:.16em;color:rgba(251,244,233,.62);text-transform:uppercase;text-shadow:0 1px 4px rgba(0,0,0,.6)}
 .scene-dots{display:flex;gap:6px;margin-top:1px}
 .scene-dots i{width:6px;height:6px;border-radius:50%;background:rgba(251,244,233,.35);transition:all .35s var(--ease)}
-.scene-dots i.on{background:#E7CC92;width:17px;border-radius:3px}
+.scene-dots i.on{background:#D9C7A0;width:17px;border-radius:3px}
 
 /* fine-tune block */
 .tune{display:flex;flex-direction:column;gap:13px}
 .tune .ctl{display:flex;align-items:center;gap:14px}
-.tune .ctl>label{flex:0 0 42px;font-family:var(--util);font-size:10px;letter-spacing:.16em;color:#E7CC92;text-transform:uppercase;font-weight:600}
+.tune .ctl>label{flex:0 0 42px;font-family:var(--util);font-size:10px;letter-spacing:.16em;color:#D9C7A0;text-transform:uppercase;font-weight:600}
 .tune .ctl.slider>label{flex:0 0 42px}
 
 /* direction switch */
@@ -584,11 +584,466 @@ input[type=range]::-moz-range-thumb{background:#FBF4E9}
 
 /* actions */
 .mk-actions{display:flex;gap:12px;margin-top:2px}
-.mk-act{flex:1;padding:15px 12px;border-radius:14px;font-family:var(--util);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;border:1px solid rgba(244,233,219,.3);background:rgba(52,34,24,.55);color:#F4E9DB;transition:all .25s}
+.mk-act{flex:1;padding:15px 12px;border-radius:14px;font-family:var(--util);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;border:1px solid rgba(244,233,219,.3);background:rgba(52,34,24,.55);color:#F0E8DF;transition:all .25s}
 .mk-act:active{background:rgba(70,46,32,.85)}
-.mk-act.compare-on{background:rgba(231,204,146,.22);border-color:#E7CC92}
-.mk-act.primary{background:var(--gold);color:#241209;border-color:var(--gold);font-weight:700}
-.mk-act.primary:active{background:#B08A3E}
+.mk-act.compare-on{background:rgba(231,204,146,.22);border-color:#D9C7A0}
+.mk-act.primary{background:var(--gold);color:#1F140E;border-color:var(--gold);font-weight:700}
+.mk-act.primary:active{background:#9D8451}
+
+/* ============================================================
+   COMMUNITY · 瀑布流 + 液态玻璃 + 留白 + scroll snap
+   ============================================================ */
+
+#sc-comm{--gap:16px;--pad:22px}
+@media (min-width:520px){#sc-comm{--gap:20px;--pad:30px}}
+
+#sc-comm .scroll{
+  padding:calc(84px + env(safe-area-inset-top)) var(--pad) calc(134px + env(safe-area-inset-bottom));
+  scroll-snap-type:y proximity;
+  scroll-padding-top:calc(78px + env(safe-area-inset-top));
+  scroll-behavior:smooth;
+}
+#sc-comm .sec-h{font-size:29px;line-height:1.34;margin:18px 0 12px}
+#sc-comm .sec-p{margin-bottom:34px;line-height:2;max-width:32em}
+
+/* ---------- masonry feed ---------- */
+#storyFeed{
+  column-width:172px;          /* responsive: as many ≥172px columns as fit */
+  column-gap:var(--gap);
+  column-fill:balance;
+}
+@media (max-width:378px){#storyFeed{column-width:142px}}
+@media (min-width:700px){#storyFeed{column-width:224px}}
+
+#storyFeed .story{
+  break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;
+  display:inline-block;width:100%;
+  margin:0 0 var(--gap);
+  border-radius:20px;
+  background:rgba(58,38,26,.55);
+  border:1px solid rgba(244,233,219,.12);
+  box-shadow:0 20px 36px -26px rgba(0,0,0,.85);
+  scroll-snap-align:start;
+  animation:storyIn .6s var(--ease) both;
+  animation-delay:var(--d,0ms);
+}
+@keyframes storyIn{from{opacity:0;transform:translateY(16px) scale(.985)}to{opacity:1;transform:none}}
+
+#storyFeed .story-look{
+  height:auto;aspect-ratio:var(--ar,.8);
+  border-radius:19px 19px 0 0;
+}
+#storyFeed .story-look .ln{
+  left:10px;right:auto;bottom:10px;
+  font-size:8.5px;letter-spacing:.16em;padding:5px 11px;border-radius:20px;
+  background:linear-gradient(150deg,rgba(255,247,235,.24),rgba(255,247,235,.08));
+  backdrop-filter:blur(10px) saturate(180%);-webkit-backdrop-filter:blur(10px) saturate(180%);
+  box-shadow:inset 0 1px 0 rgba(255,251,244,.5),inset 0 -1px 0 rgba(255,251,244,.12);
+  color:#F8F3EC;
+}
+#storyFeed .story-body{padding:15px 15px 4px}
+#storyFeed .story-txt{font-size:12.5px;line-height:2}
+#storyFeed .story-orig{font-size:11.5px;line-height:1.85;margin-bottom:10px}
+#storyFeed .cult{
+  display:block;margin-top:14px;padding:11px 0 0;
+  font-size:10.5px;line-height:1.75;
+  border:0;border-top:1px dashed rgba(216,190,126,.38);border-radius:0;
+}
+#storyFeed .story-top{padding:14px 15px 0;gap:9px;align-items:center}
+#storyFeed .ava{width:26px;height:26px}
+#storyFeed .story-top .n{font-size:11.5px}
+#storyFeed .story-top .m{font-size:8.5px;letter-spacing:.12em;margin-top:1px}
+#storyFeed .story-foot{
+  display:flex;flex-wrap:wrap;gap:9px 14px;
+  padding:13px 15px 15px;
+}
+#storyFeed .story-foot button{font-size:9px;letter-spacing:.1em;line-height:1.4;text-align:left}
+
+/* ---------- passport grid · responsive ---------- */
+#sc-pass .scroll{padding:calc(84px + env(safe-area-inset-top)) 22px calc(134px + env(safe-area-inset-bottom))}
+#sc-pass .sec-p{margin-bottom:26px;line-height:2}
+.looks-grid{grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:16px}
+
+/* ============================================================
+   液态玻璃 · liquid glass
+   镜子页 / 护照页内部按钮 · 无需改 HTML，JS 生成的按钮自动继承
+   ============================================================ */
+
+.mk-act,
+.expr-restart,
+.flow-back,
+.mood-input .send,
+.recipe-actions .btn,
+.recipe-head .x,
+#sc-pass .look-card .ops button{
+  position:relative;overflow:hidden;border:0;
+  color:#F8F3EC;
+  background:linear-gradient(155deg,rgba(255,247,235,.22),rgba(255,247,235,.055) 46%,rgba(255,247,235,.14));
+  backdrop-filter:blur(18px) saturate(200%) brightness(1.06);
+  -webkit-backdrop-filter:blur(18px) saturate(200%) brightness(1.06);
+  box-shadow:
+    inset 0 1px 0 rgba(255,251,244,.55),
+    inset 0 -1px 0 rgba(255,251,244,.10),
+    inset 1px 0 0 rgba(255,251,244,.18),
+    inset -1px 0 0 rgba(255,251,244,.18),
+    inset 0 -10px 18px -12px rgba(255,251,244,.30),
+    0 10px 22px -12px rgba(0,0,0,.6);
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s var(--ease),color .3s;
+}
+/* 高光：左上角的镜面反射 */
+.mk-act::before,
+.expr-restart::before,
+.flow-back::before,
+.mood-input .send::before,
+.recipe-actions .btn::before,
+.recipe-head .x::before,
+#sc-pass .look-card .ops button::before{
+  content:"";position:absolute;left:-60%;right:-60%;top:-45%;height:150%;pointer-events:none;
+  background:radial-gradient(46% 56% at 30% 6%,rgba(255,252,246,.42),transparent 64%);
+}
+/* 折射边：上亮下暗的一圈玻璃厚度 */
+.mk-act::after,
+.expr-restart::after,
+.flow-back::after,
+.mood-input .send::after,
+.recipe-actions .btn::after,
+.recipe-head .x::after,
+#sc-pass .look-card .ops button::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,252,246,.36),transparent 24%,transparent 72%,rgba(255,252,246,.18));
+  -webkit-mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
+  -webkit-mask-composite:xor;
+  mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
+  mask-composite:exclude;
+}
+.mk-act:active,
+.expr-restart:active,
+.mood-input .send:active,
+.recipe-actions .btn:active,
+.recipe-head .x:active,
+#sc-pass .look-card .ops button:active{transform:scale(.965)}
+
+/* 内容压在玻璃层之上 */
+.mk-act>*,.mood-input .send>svg,.recipe-actions .btn>*{position:relative;z-index:1}
+
+/* ---------- 镜子页 ---------- */
+.mk-act{border-radius:16px;padding:15px 12px;font-weight:600}
+.mk-act.compare-on{
+  background:linear-gradient(155deg,rgba(243,219,168,.34),rgba(212,177,113,.16));
+  box-shadow:
+    inset 0 1px 0 rgba(255,252,244,.7),
+    inset 0 -10px 18px -12px rgba(243,219,168,.5),
+    0 10px 22px -12px rgba(0,0,0,.6);
+}
+/* 主按钮：金色液态玻璃 */
+.mk-act.primary{
+  color:#251B14;
+  background:linear-gradient(155deg,rgba(243,219,168,.95),rgba(210,174,109,.84));
+  backdrop-filter:blur(18px) saturate(190%);
+  -webkit-backdrop-filter:blur(18px) saturate(190%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,253,247,.85),
+    inset 0 -8px 15px -10px rgba(120,84,34,.55),
+    0 12px 26px -12px rgba(196,158,90,.6);
+}
+.mk-act.primary::after{background:linear-gradient(180deg,rgba(255,253,247,.6),transparent 26%,transparent 70%,rgba(120,84,34,.22))}
+.mk-act.primary:active{background:linear-gradient(155deg,rgba(228,200,145,.95),rgba(190,155,94,.86))}
+
+.expr-restart{border-radius:20px;padding:8px 15px;letter-spacing:.14em}
+.flow-back{border-radius:20px;padding:10px 20px;color:rgba(251,244,233,.85)}
+.flow-back:hover{color:#F8F3EC}
+.mood-input .send{border-radius:50%}
+.mood-input .send svg{stroke:#F8F3EC;fill:none;stroke-width:2}
+.recipe-head .x{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;padding:0;font-size:21px;color:rgba(251,244,233,.85)}
+
+/* recipe 主行动按钮：与镜子主按钮同一套金色玻璃 */
+.recipe-actions .btn-gold{
+  color:#251B14;
+  background:linear-gradient(155deg,rgba(243,219,168,.95),rgba(210,174,109,.84));
+  box-shadow:
+    inset 0 1px 0 rgba(255,253,247,.85),
+    inset 0 -8px 15px -10px rgba(120,84,34,.55),
+    0 12px 26px -12px rgba(196,158,90,.6);
+}
+.recipe-actions .btn-gold:hover{background:linear-gradient(155deg,rgba(236,209,155,.95),rgba(198,162,99,.86))}
+.recipe-actions .btn-gold::after{background:linear-gradient(180deg,rgba(255,253,247,.6),transparent 26%,transparent 70%,rgba(120,84,34,.22))}
+
+/* ---------- 护照页 ---------- */
+#sc-pass .look-card .ops{gap:8px;padding:0 12px 12px}
+#sc-pass .look-card .ops button{
+  flex:1;border-radius:12px;padding:9px 6px;text-align:center;
+  font-size:9px;letter-spacing:.1em;color:rgba(251,244,233,.9);
+}
+
+/* 不支持 backdrop-filter 时的兜底 */
+@supports not ((backdrop-filter:blur(2px)) or (-webkit-backdrop-filter:blur(2px))){
+  .mk-act,.expr-restart,.flow-back,.mood-input .send,
+  .recipe-head .x,#sc-pass .look-card .ops button{background:rgba(96,68,48,.62)}
+  #storyFeed .story-look .ln{background:rgba(20,13,9,.62)}
+}
+
+/* ============================================================
+   留白 · breathing room（全局节奏）
+   ============================================================ */
+
+/* — 首页 — */
+.w-hero{padding:118px 34px 100px}
+#sc-welcome .line{margin:32px auto}
+#sc-welcome .q{line-height:1.95}
+#sc-welcome .sub{margin-top:18px}
+.w-actions{margin-top:46px;gap:14px}
+.w-sec{padding:64px 34px}
+.w-sec .eyebrow{margin-bottom:10px}
+.mod-line{padding:20px 2px}
+.w-end{padding:64px 34px calc(56px + env(safe-area-inset-bottom));gap:22px}
+.w-line{line-height:2.15}
+
+/* — 扫描页 — */
+.scan-panel{padding:72px 28px calc(112px + env(safe-area-inset-bottom));gap:24px}
+.scan-list{gap:15px;min-height:auto}
+.scan-item{font-size:13px;line-height:1.7}
+.id-card{padding:26px;gap:20px}
+.id-main{gap:18px}
+.cam-note{line-height:2.05;padding:0 6px}
+.scan-actions{gap:14px}
+
+/* — 镜子页 — */
+.mirror-dock{padding:72px 18px calc(90px + env(safe-area-inset-bottom));gap:18px}
+#sc-mirror.phase-create .mirror-ui{gap:26px;padding:26px 18px calc(100px + env(safe-area-inset-bottom))}
+.tune{gap:18px}
+.whatif-wrap{gap:11px}
+.mk-actions{margin-top:6px;gap:14px}
+.dir-switch{gap:12px}
+
+/* — 表达流程（心情 / 方向） — */
+.flow-sheet{padding:96px 24px calc(104px + env(safe-area-inset-bottom));gap:20px}
+.flow-title{line-height:1.55}
+.mood-grid{gap:12px}
+.mood{padding:18px 18px}
+.mood .mh{margin-top:7px;line-height:1.6}
+.mood-input{margin-top:8px}
+.dir-list{gap:14px}
+.dir{padding:17px 18px;gap:16px}
+.dir-desc{margin-top:5px;line-height:1.7}
+
+/* — 共创对话 — */
+.cochat-head{padding:20px 22px 12px}
+.msgs{padding:10px 20px;gap:16px}
+.msg{padding:13px 18px;line-height:1.9}
+.sugg-row{padding:12px 18px}
+.cochat-input{padding:12px 18px calc(18px + env(safe-area-inset-bottom));gap:12px}
+
+/* — 配方弹层 — */
+.recipe-head{padding:calc(20px + env(safe-area-inset-top)) 24px 14px}
+.recipe-scroll{padding:6px 24px 24px}
+.recipe-expr{line-height:1.95;margin-bottom:6px}
+.rp-list{margin-top:22px}
+.rp-name{margin-top:4px}
+.recipe-actions{padding:18px 24px calc(24px + env(safe-area-inset-bottom))}
+
+/* — 社区 / 护照 — */
+#sc-comm .scroll,#sc-pass .scroll{padding-top:calc(90px + env(safe-area-inset-top))}
+#sc-comm .eyebrow,#sc-pass .eyebrow{margin-bottom:6px}
+#sc-pass .pass-id{padding:24px;margin:16px 0 30px}
+#sc-pass .pass-id .n{margin:8px 0 16px}
+#sc-pass .pass-id .meta{line-height:2.3}
+#sc-pass .empty{padding:44px 24px;line-height:2.2}
+#storyFeed .story-body{padding:17px 16px 4px}
+#storyFeed .story-txt{line-height:2.05}
+#storyFeed .cult{margin-top:16px;padding-top:13px;line-height:1.85}
+#storyFeed .story-top{padding:16px 16px 0}
+#storyFeed .story-foot{padding:14px 16px 16px;gap:10px 14px}
+
+/* ============================================================
+   社区头像 · 抽象色卡 / 唇膏
+   一支立起来的膏体：斜切的膏头 + 一段膏管
+   ============================================================ */
+#storyFeed .ava{
+  position:relative;width:19px;height:38px;flex:0 0 auto;
+  background:none;border:0;border-radius:0;box-shadow:none;
+  transition:transform .35s var(--ease);
+}
+/* 膏体：斜切头，颜色＝她的肤色 */
+#storyFeed .ava::before{
+  content:"";position:absolute;left:0;right:0;top:0;height:62%;
+  border-radius:2.5px 2.5px 0 0;
+  background:linear-gradient(158deg,var(--a-hi) 0%,var(--a-c) 62%);
+  clip-path:polygon(0 30%,100% 0,100% 100%,0 100%);
+  box-shadow:inset -3px 0 5px -3px rgba(0,0,0,.5),inset 3px 0 4px -3px rgba(255,252,246,.35);
+}
+/* 膏管：一段冷调的金属/玻璃 */
+#storyFeed .ava::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:42%;
+  border-radius:0 0 3px 3px;
+  background:linear-gradient(96deg,rgba(255,251,244,.10) 0 22%,rgba(255,251,244,.32) 22% 40%,rgba(255,251,244,.12) 40% 100%);
+  box-shadow:inset 0 1px 0 rgba(255,252,246,.55),inset 0 -1px 0 rgba(0,0,0,.25);
+}
+#storyFeed .story:hover .ava{transform:translateY(-2px)}
+
+/* ============================================================
+   社区文案 · 引述
+   ============================================================ */
+#storyFeed .story-body{padding:22px 16px 2px}
+#storyFeed .story-txt{
+  position:relative;
+  font-family:'Noto Serif SC','Songti SC',serif;
+  font-weight:300;font-size:14px;line-height:2.05;letter-spacing:.02em;
+  color:#F2EBE2;
+  padding-left:2px;
+}
+#storyFeed .story-txt::before{
+  content:"\201C";position:absolute;top:-26px;left:-4px;
+  font-family:'Cormorant Garamond',serif;font-weight:600;font-size:46px;line-height:1;
+  color:rgba(231,204,146,.42);pointer-events:none;
+}
+/* 姓名/地点 = 引述的署名 */
+#storyFeed .story-top{padding:18px 16px 0;gap:11px;align-items:center}
+#storyFeed .story-top .n{font-family:'Cormorant Garamond','Noto Serif SC',serif;font-size:14px;letter-spacing:.06em}
+#storyFeed .story-top .m{font-size:8.5px;letter-spacing:.14em;margin-top:2px}
+#storyFeed .story-foot{padding:16px 16px 16px}
+
+/* 标题下方直接接瀑布流 */
+#sc-comm .sec-h{margin-bottom:32px}
+
+
+/* ============================================================
+   顶栏可读性修复
+   .light 是旧象牙主题的遗留，肤色主题下深字压深底 → 看不见
+   ============================================================ */
+#topbar.light{background:linear-gradient(rgba(30,18,13,.78),rgba(30,18,13,0))}
+#topbar.light .brand{color:#F8F3EC;text-shadow:0 1px 12px rgba(14,9,5,.7)}
+#topbar.light .brand em{color:#DECEAD}
+#topbar.light .ctx{color:rgba(244,233,219,.6)}
+#topbar .brand{font-weight:600}
+
+/* ============================================================
+   封面字标 · 立体
+   金属渐变填充 + 分层挤出 + 随视角移动的高光
+   ============================================================ */
+.h3d{
+  display:inline-block;
+  background-image:
+    var(--grain),
+    repeating-linear-gradient(93deg,rgba(255,252,244,.16) 0 1px,rgba(74,50,26,.13) 1px 2.4px,transparent 2.4px 4.2px),
+    linear-gradient(174deg,#FEFCF9 0%,#F0E7D8 24%,#D6C7AA 42%,#FCF9F3 55%,#C1AA86 71%,#EDE4D3 100%);
+  background-size:150px 150px,auto,190% 190%;
+  background-position:0 0,0 0,calc(50% + var(--gx,0px)) calc(50% + var(--gy,0px));
+  background-blend-mode:overlay,soft-light,normal;
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent;
+  text-shadow:
+    1px 1px 0 rgba(126,92,52,.60),
+    2px 2px 0 rgba(110,79,44,.55),
+    3px 3px 0 rgba(94,67,37,.50),
+    4px 4px 0 rgba(78,55,30,.44),
+    5px 5px 0 rgba(63,44,24,.37),
+    6px 6px 0 rgba(50,34,18,.29),
+    7px 7px 0 rgba(38,26,14,.21),
+    9px 11px 20px rgba(12,8,5,.50),
+    0 26px 48px rgba(10,6,4,.42);
+  transform:perspective(900px) rotateX(var(--rx,8deg)) rotateY(var(--ry,-4deg));
+  transform-origin:50% 60%;
+  transition:transform .5s var(--ease),background-position .5s var(--ease);
+  will-change:transform;
+}
+@media (max-width:420px){
+  .h3d{text-shadow:
+    1px 1px 0 rgba(126,92,52,.6),2px 2px 0 rgba(108,77,43,.53),
+    3px 3px 0 rgba(90,63,35,.46),4px 4px 0 rgba(72,50,27,.38),
+    5px 5px 0 rgba(54,37,20,.29),
+    7px 9px 16px rgba(12,8,5,.5),0 22px 40px rgba(10,6,4,.42)}
+}
+
+/* ============================================================
+   纹理 · 让大色块不再是塑料
+   ============================================================ */
+:root{
+  --grain:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="3" stitchTiles="stitch"/></filter><rect width="150" height="150" filter="url(%23g)" opacity="0.5"/></svg>');
+}
+
+/* 社区 / 护照底色：渐变 + 颗粒 */
+#sc-comm,#sc-pass{
+  background-image:var(--grain),linear-gradient(172deg,#34251C 0%,#1D1512 100%);
+  background-size:150px 150px,auto;
+  background-blend-mode:soft-light,normal;
+}
+/* 卡片：颗粒更细一档，避免和底色摩尔纹 */
+#storyFeed .story{
+  background-image:var(--grain),linear-gradient(158deg,rgba(66,44,30,.62),rgba(48,31,21,.5));
+  background-size:110px 110px,auto;
+  background-blend-mode:soft-light,normal;
+}
+/* 护照证件卡：加一层斜向织纹，像证件纸 */
+.pass-id{
+  background-image:
+    var(--grain),
+    repeating-linear-gradient(48deg,rgba(231,204,146,.05) 0 2px,transparent 2px 6px),
+    linear-gradient(150deg,#34261D,#140F0C 68%);
+  background-size:130px 130px,auto,auto;
+  background-blend-mode:soft-light,normal,normal;
+}
+/* 妆容色块：颗粒压一层，别像纯 CSS 渐变 */
+.story-look::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:var(--grain);background-size:120px 120px;
+  mix-blend-mode:soft-light;opacity:.55;
+}
+/* 首页分区底纹 */
+.w-sec,.w-end{
+  background-image:var(--grain);background-size:170px 170px;
+  background-blend-mode:soft-light;
+}
+
+/* ============================================================
+   ONE CANVAS · 原创 monogram 底纹
+   动机取自 app 自身语汇：✦（文化标记）· ○（ONE / 镜面）· ◇（色卡）
+   斜向半错位排列，成一块可无缝平铺的"maison canvas"
+   ============================================================ */
+:root{
+  --canvas:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><g fill="none" stroke="%23291D13" stroke-width="2" opacity="0.58"><circle cx="16" cy="16" r="7"/><circle cx="48" cy="48" r="7"/></g><g fill="%23291D13" opacity="0.58"><path d="M48 6C49.2 13 51 14.8 58 16C51 17.2 49.2 19 48 26C46.8 19 45 17.2 38 16C45 14.8 46.8 13 48 6Z"/><path d="M16 38C17.2 45 19 46.8 26 48C19 49.2 17.2 51 16 58C14.8 51 13 49.2 6 48C13 46.8 14.8 45 16 38Z"/><path d="M32 26L37 32L32 38L27 32Z"/><circle cx="0" cy="32" r="2"/><circle cx="64" cy="32" r="2"/><circle cx="32" cy="0" r="2"/><circle cx="32" cy="64" r="2"/></g></svg>');
+}
+
+/* 字标：canvas 蚀刻进金属里，拉丝和颗粒保留 */
+.h3d{
+  background-image:
+    var(--canvas),
+    var(--grain),
+    repeating-linear-gradient(93deg,rgba(255,252,244,.16) 0 1px,rgba(74,50,26,.13) 1px 2.4px,transparent 2.4px 4.2px),
+    linear-gradient(174deg,#FEFCF9 0%,#F0E7D8 24%,#D6C7AA 42%,#FCF9F3 55%,#C1AA86 71%,#EDE4D3 100%);
+  background-size:23px 23px,150px 150px,auto,190% 190%;
+  background-position:
+    calc(var(--gx,0px) * .35) calc(var(--gy,0px) * .35),
+    0 0,0 0,
+    calc(50% + var(--gx,0px)) calc(50% + var(--gy,0px));
+  background-blend-mode:multiply,overlay,soft-light,normal;
+}
+
+/* 开始体验：压印 canvas 的金色皮面 */
+#sc-welcome .btn-gold{
+  background-image:
+    radial-gradient(72% 132% at 50% 50%,rgba(255,252,243,.62) 0%,rgba(255,252,243,.26) 44%,transparent 76%),
+    var(--canvas),
+    var(--grain),
+    linear-gradient(168deg,#E2D2AC 0%,#CBB78E 46%,#B6A075 74%,#D6C5A1 100%);
+  background-size:auto,30px 30px,120px 120px,auto;
+  background-blend-mode:screen,multiply,soft-light,normal;
+  color:#150E07;font-weight:700;font-size:14.5px;
+  text-shadow:0 1px 0 rgba(255,253,247,.55);
+  border:1px solid rgba(255,250,238,.32);
+  box-shadow:
+    inset 0 1px 0 rgba(255,253,247,.7),
+    inset 0 -10px 18px -12px rgba(90,62,28,.55),
+    0 16px 32px -14px rgba(160,125,55,.55);
+  transition:background-position .5s var(--ease),box-shadow .35s var(--ease),transform .25s var(--ease);
+}
+#sc-welcome .btn-gold:hover{
+  background-position:0 0,6px 6px,0 0,0 0;
+  box-shadow:
+    inset 0 1px 0 rgba(255,253,247,.8),
+    inset 0 -10px 18px -12px rgba(90,62,28,.5),
+    0 20px 38px -14px rgba(170,133,60,.6);
+}
+#sc-welcome .btn-gold:active{transform:scale(.985)}
 </style>
 </head>
 <body>
@@ -609,7 +1064,7 @@ input[type=range]::-moz-range-thumb{background:#FBF4E9}
     </div>
     <div class="scroll wscroll" id="wScroll">
       <div class="w-hero">
-        <h1>Fenty<br>One</h1>
+        <h1><span class="h3d">Fenty<br>One</span></h1>
         <div class="line"></div>
         <p class="q">今天，你想表达怎样的自己？</p>
         <div class="w-actions">
@@ -763,7 +1218,6 @@ input[type=range]::-moz-range-thumb{background:#FBF4E9}
     <div class="scroll">
       <p class="eyebrow">Beauty Without Borders</p>
       <h2 class="sec-h">无界美妆社区</h2>
-      <p class="sec-p">来自世界各地的 Beauty Story · AI 自动翻译并解释文化语境</p>
       <div id="storyFeed"></div>
     </div>
   </section>
@@ -820,7 +1274,7 @@ var state={
   camera:false, demo:false, stream:null,
   identity:null,
   scene:'office',
-  look:{name:'裸感日常', lip:{c:'#B98A73',i:.45}, eye:{c:'#8A6A4E',i:.3}, blush:{c:'#D9917B',i:.35}, glow:.35, found:{c:'255,222,190',i:.4}},
+  look:{name:'裸感日常', lip:{c:'#B18D7B',i:.45}, eye:{c:'#836A55',i:.3}, blush:{c:'#C99A8B',i:.35}, glow:.35, found:{c:'255,222,190',i:.4}},
   saved:[], liked:{}
 };
 var SCENES={office:'地铁 冷白光',outdoor:'黄昏 暖金',night:'Live House 暖光',studio:'Zoom 屏幕光'};
@@ -1059,23 +1513,23 @@ $('#btnRescan').addEventListener('click',function(){
 /* ================= mirror: looks & controls ================= */
 /* ===== expression directions (mirror's answers) ===== */
 var DIRS={
- 'smoky-rose':{name:'烟熏玫瑰',desc:'深邃眼妆里，藏着柔软的唇',look:{lip:{c:'#B4696B',i:.6},eye:{c:'#5A4638',i:.72},blush:{c:'#C86A5E',i:.3},glow:.3}},
- 'sharp-nude':{name:'锋利裸调',desc:'利落的线条，克制的唇色',look:{lip:{c:'#B98A73',i:.5},eye:{c:'#4A3A2E',i:.62},blush:{c:'#D9917B',i:.28},glow:.35}},
- 'wine-matte':{name:'酒红雾面',desc:'叛逆，直接写在唇上',look:{lip:{c:'#7E2E3A',i:.85},eye:{c:'#6E5642',i:.35},blush:{c:'#B0574F',i:.25},glow:.08}},
- 'hazy-mauve':{name:'朦胧藕紫',desc:'像隔着一层薄雾看你',look:{lip:{c:'#9B6B7E',i:.5},eye:{c:'#8A7080',i:.42},blush:{c:'#C89AA0',i:.35},glow:.55}},
- 'soft-glow':{name:'柔光裸妆',desc:'有呼吸感的、干净的光',look:{lip:{c:'#C98A82',i:.45},eye:{c:'#9A7864',i:.3},blush:{c:'#E0A090',i:.4},glow:.7}},
- 'muted-berry':{name:'低饱和莓果',desc:'安静的深色，不喧哗',look:{lip:{c:'#8E4A56',i:.6},eye:{c:'#6E5260',i:.45},blush:{c:'#A86A6A',i:.3},glow:.25}},
- 'golden-warm':{name:'暖金眼影',desc:'把黄昏戴在眼睑上',look:{lip:{c:'#C97C5A',i:.5},eye:{c:'#9A6A32',i:.62},blush:{c:'#D6906A',i:.35},glow:.6}},
- 'coral-sheer':{name:'珊瑚薄透',desc:'落日残留的一点余温',look:{lip:{c:'#D2603F',i:.5},eye:{c:'#B0885E',i:.35},blush:{c:'#E58A6A',i:.42},glow:.58}},
- 'bronze-lid':{name:'古铜眼妆',desc:'被夕阳镀过的眼睛',look:{lip:{c:'#A86550',i:.55},eye:{c:'#7A5A34',i:.7},blush:{c:'#C07E5A',i:.3},glow:.5}},
- 'rose-defined':{name:'轮廓玫瑰',desc:'柔软的玫瑰，清晰的骨相',look:{lip:{c:'#C96C7E',i:.6},eye:{c:'#7A5A4E',i:.5},blush:{c:'#E08A93',i:.4},glow:.45}},
- 'clean-bold':{name:'干净的大胆',desc:'一处着力，其余留白',look:{lip:{c:'#A8323C',i:.7},eye:{c:'#5A4638',i:.4},blush:{c:'#C86A5E',i:.25},glow:.3}},
- 'classic-red':{name:'经典雾面红',desc:'胶片里走出来的那支红',look:{lip:{c:'#A8323C',i:.85},eye:{c:'#6E5642',i:.3},blush:{c:'#C86A5E',i:.2},glow:.08}},
- 'vintage-rose':{name:'复古玫瑰',desc:'旧时光的柔和玫调',look:{lip:{c:'#B4565E',i:.7},eye:{c:'#7A5A50',i:.35},blush:{c:'#C87A76',i:.28},glow:.12}},
- 'film-bronze':{name:'胶片古铜',desc:'暖棕调，颗粒般的质感',look:{lip:{c:'#9E5A50',i:.6},eye:{c:'#7A5A34',i:.55},blush:{c:'#B87356',i:.3},glow:.2}},
- 'metallic-chrome':{name:'金属铬光',desc:'冷调金属，未来的光',look:{lip:{c:'#9B6B7E',i:.55},eye:{c:'#8E97AB',i:.7},blush:{c:'#C08E9C',i:.25},glow:.85}},
- 'future-glow':{name:'未来水光',desc:'像被液态光包裹',look:{lip:{c:'#C98A9C',i:.5},eye:{c:'#A6A0C0',i:.55},blush:{c:'#D0A0B0',i:.3},glow:.9}},
- 'silver-lid':{name:'银色眼影',desc:'月光落在眼睑',look:{lip:{c:'#A87E8E',i:.5},eye:{c:'#9AA0B0',i:.65},blush:{c:'#C0A0AC',i:.25},glow:.75}}
+ 'smoky-rose':{name:'烟熏玫瑰',desc:'深邃眼妆里，藏着柔软的唇',look:{lip:{c:'#AC7173',i:.6},eye:{c:'#56473C',i:.72},blush:{c:'#B67870',i:.3},glow:.3}},
+ 'sharp-nude':{name:'锋利裸调',desc:'利落的线条，克制的唇色',look:{lip:{c:'#B18D7B',i:.5},eye:{c:'#473A31',i:.62},blush:{c:'#C99A8B',i:.28},glow:.35}},
+ 'wine-matte':{name:'酒红雾面',desc:'叛逆，直接写在唇上',look:{lip:{c:'#703C44',i:.85},eye:{c:'#695647',i:.35},blush:{c:'#A0655F',i:.25},glow:.08}},
+ 'hazy-mauve':{name:'朦胧藕紫',desc:'像隔着一层薄雾看你',look:{lip:{c:'#96707F',i:.5},eye:{c:'#87737F',i:.42},blush:{c:'#C39FA4',i:.35},glow:.55}},
+ 'soft-glow':{name:'柔光裸妆',desc:'有呼吸感的、干净的光',look:{lip:{c:'#BD938E',i:.45},eye:{c:'#947A6A',i:.3},blush:{c:'#D2A89E',i:.4},glow:.7}},
+ 'muted-berry':{name:'低饱和莓果',desc:'安静的深色，不喧哗',look:{lip:{c:'#87515B',i:.6},eye:{c:'#6B5560',i:.45},blush:{c:'#A17171',i:.3},glow:.25}},
+ 'golden-warm':{name:'暖金眼影',desc:'把黄昏戴在眼睑上',look:{lip:{c:'#B6836D',i:.5},eye:{c:'#886944',i:.62},blush:{c:'#C4957C',i:.35},glow:.6}},
+ 'coral-sheer':{name:'珊瑚薄透',desc:'落日残留的一点余温',look:{lip:{c:'#B96E58',i:.5},eye:{c:'#A78867',i:.35},blush:{c:'#D0947F',i:.42},glow:.58}},
+ 'bronze-lid':{name:'古铜眼妆',desc:'被夕阳镀过的眼睛',look:{lip:{c:'#996D5F',i:.55},eye:{c:'#6E5940',i:.7},blush:{c:'#AF836B',i:.3},glow:.5}},
+ 'rose-defined':{name:'轮廓玫瑰',desc:'柔软的玫瑰，清晰的骨相',look:{lip:{c:'#B97C88',i:.6},eye:{c:'#755C53',i:.5},blush:{c:'#D1999F',i:.4},glow:.45}},
+ 'clean-bold':{name:'干净的大胆',desc:'一处着力，其余留白',look:{lip:{c:'#A8323C',i:.7},eye:{c:'#56473C',i:.4},blush:{c:'#B67870',i:.25},glow:.3}},
+ 'classic-red':{name:'经典雾面红',desc:'胶片里走出来的那支红',look:{lip:{c:'#A8323C',i:.85},eye:{c:'#695647',i:.3},blush:{c:'#B67870',i:.2},glow:.08}},
+ 'vintage-rose':{name:'复古玫瑰',desc:'旧时光的柔和玫调',look:{lip:{c:'#A4666B',i:.7},eye:{c:'#755C55',i:.35},blush:{c:'#BA8784',i:.28},glow:.12}},
+ 'film-bronze':{name:'胶片古铜',desc:'暖棕调，颗粒般的质感',look:{lip:{c:'#956059',i:.6},eye:{c:'#6E5940',i:.55},blush:{c:'#A77A67',i:.3},glow:.2}},
+ 'metallic-chrome':{name:'金属铬光',desc:'冷调金属，未来的光',look:{lip:{c:'#96707F',i:.55},eye:{c:'#9198A8',i:.7},blush:{c:'#BA949E',i:.25},glow:.85}},
+ 'future-glow':{name:'未来水光',desc:'像被液态光包裹',look:{lip:{c:'#BE95A1',i:.5},eye:{c:'#A8A4BC',i:.55},blush:{c:'#CBA5B2',i:.3},glow:.9}},
+ 'silver-lid':{name:'银色眼影',desc:'月光落在眼睑',look:{lip:{c:'#A3838F',i:.5},eye:{c:'#9CA1AE',i:.65},blush:{c:'#BCA4AD',i:.25},glow:.75}}
 };
 /* mood cards → each yields 2–3 directions */
 var INTENTS=[
@@ -1100,8 +1554,8 @@ function intentToDirs(text){
   return{label:t,dirs:['soft-glow','smoky-rose','classic-red']};
 }
 
-var LIPCOLS=['#B98A73','#B4696B','#A8323C','#C96C7E','#D2603F','#7E3B52','#9B6B7E'];
-var EYECOLS=['#8A6A4E','#7A5A34','#5A4638','#9A7286','#8E97AB','#B0885E'];
+var LIPCOLS=['#B18D7B','#AC7173','#A8323C','#B97C88','#B96E58','#734656','#96707F'];
+var EYECOLS=['#836A55','#6E5940','#56473C','#967686','#9198A8','#A78867'];
 
 function applyLook(){
   var mk=$('#makeup'),L=state.look;
@@ -1290,14 +1744,14 @@ function coCreate(text){
   // colors
   var CMAP=[
    [/(正红|大红|红唇|复古)/,'lip','#A8323C','经典正红唇'],
-   [/(玫瑰|粉)/,'lip','#C96C7E','玫瑰粉唇色'],
-   [/(珊瑚|橘|橙)/,'lip','#D2603F','珊瑚橘唇色'],
-   [/(豆沙)/,'lip','#B4696B','豆沙唇色'],
-   [/(裸|奶茶|nude)/i,'lip','#B98A73','裸感奶茶唇'],
-   [/(梅子|紫)/,'lip','#7E3B52','梅子色唇妆'],
-   [/(烟熏)/,'eye','#5A4638','烟熏眼影'],
-   [/(铜|金棕|金色)/,'eye','#9A6A32','铜金眼影'],
-   [/(银|金属|未来|赛博|chrome)/i,'eye','#8E97AB','金属感眼影']
+   [/(玫瑰|粉)/,'lip','#B97C88','玫瑰粉唇色'],
+   [/(珊瑚|橘|橙)/,'lip','#B96E58','珊瑚橘唇色'],
+   [/(豆沙)/,'lip','#AC7173','豆沙唇色'],
+   [/(裸|奶茶|nude)/i,'lip','#B18D7B','裸感奶茶唇'],
+   [/(梅子|紫)/,'lip','#734656','梅子色唇妆'],
+   [/(烟熏)/,'eye','#56473C','烟熏眼影'],
+   [/(铜|金棕|金色)/,'eye','#886944','铜金眼影'],
+   [/(银|金属|未来|赛博|chrome)/i,'eye','#9198A8','金属感眼影']
   ];
   CMAP.forEach(function(m){
     if(m[0].test(text)){
@@ -1306,7 +1760,7 @@ function coCreate(text){
     }
   });
   // styles / occasions
-  if(/(未来|金属|赛博)/.test(text)){L.glow=.85;L.lip.c='#9B6B7E';L.eye.c='#8E97AB';named='未来金属';notes.push('整体转向未来金属光感')}
+  if(/(未来|金属|赛博)/.test(text)){L.glow=.85;L.lip.c='#96707F';L.eye.c='#9198A8';named='未来金属';notes.push('整体转向未来金属光感')}
   if(/(复古)/.test(text)){L.glow=.08;L.lip.i=Math.max(L.lip.i,.75);named='复古红唇';notes.push('雾面复古质感')}
   if(/(烟熏)/.test(text)){L.eye.i=clamp(L.eye.i+.3);named='烟熏'+(/(铜|金)/.test(text)?'铜金':'深邃')}
   if(/(清透|水光|裸妆|日常|通勤|上班|办公)/.test(text)){
@@ -1338,7 +1792,7 @@ function coCreate(text){
   if(!notes.length&&!sceneTo){return null}
   // name
   if(!named){
-    var fam=L.lip.c==='#A8323C'?'正红':L.lip.c==='#C96C7E'?'玫瑰':L.lip.c==='#D2603F'?'珊瑚':L.lip.c==='#B4696B'?'豆沙':L.lip.c==='#7E3B52'?'梅子':L.lip.c==='#9B6B7E'?'雾紫':'裸感';
+    var fam=L.lip.c==='#A8323C'?'正红':L.lip.c==='#B97C88'?'玫瑰':L.lip.c==='#B96E58'?'珊瑚':L.lip.c==='#AC7173'?'豆沙':L.lip.c==='#734656'?'梅子':L.lip.c==='#96707F'?'雾紫':'裸感';
     var fin=L.glow>.65?'水光':(L.glow<.18?'雾面':'柔光');
     named=fam+fin;
   }
@@ -1395,7 +1849,7 @@ function mkPoly(ctx,map,pts){ctx.beginPath();
 
 function mkDrawMakeup(ctx,W,H,iw,ih,lm,L,flip){
   var map=mkMapper(W,H,iw,ih,flip),f=mkFrameOf(lm),px=Math.max(W,H)/900;
-  if(L.found&&L.found.i>0) mkWash(ctx,map,f,0,.42,1.55,1.65,0,L.foundHex||'#E7B98F',L.found.i*.3,'soft-light',22*px);
+  if(L.found&&L.found.i>0) mkWash(ctx,map,f,0,.42,1.55,1.65,0,L.foundHex||'#D8BA9E',L.found.i*.3,'soft-light',22*px);
   if(L.blush&&L.blush.i>0){var ba=L.blush.i*.42;
     mkWash(ctx,map,f,-.66,.34,.5,.36,-.2,L.blush.c,ba,'multiply',26*px);
     mkWash(ctx,map,f,.66,.32,.5,.36,.2,L.blush.c,ba,'multiply',26*px);
@@ -1432,7 +1886,7 @@ function mkDrawMakeup(ctx,W,H,iw,ih,lm,L,flip){
       ig.addColorStop(0,'rgba(255,244,224,1)');ig.addColorStop(1,'rgba(255,244,224,0)');
       ctx.fillStyle=ig;ctx.beginPath();ctx.arc(iP[0],iP[1],ir,0,7);ctx.fill();ctx.restore();
       ctx.save();ctx.globalCompositeOperation='multiply';ctx.globalAlpha=Math.min(.95,ea*.9);
-      ctx.filter='blur('+(1.5*px)+'px)';ctx.strokeStyle=mkRgba(L.liner||'#20160F',1);
+      ctx.filter='blur('+(1.5*px)+'px)';ctx.strokeStyle=mkRgba(L.liner||'#1D1712',1);
       ctx.lineCap='round';ctx.lineJoin='round';
       for(var i=0;i<n-1;i++){var t=(tOf(i)+tOf(i+1))/2,P=map(up[i]),Q=map(up[i+1]);
         ctx.lineWidth=Math.max(1.1,(1.4+3*t)*px);
@@ -1467,12 +1921,12 @@ function mkDrawMakeup(ctx,W,H,iw,ih,lm,L,flip){
       ctx.fillStyle=g2;ctx.beginPath();ctx.arc(c1[0],c1[1],rx,0,7);ctx.fill();ctx.restore()}
   }
   if(L.glow>0){var gi=L.glow;
-    mkWash(ctx,map,f,-.6,.1,.34,.16,-.12,'#FFF0D2',gi*.34,'screen',18*px);
-    mkWash(ctx,map,f,.6,.08,.34,.16,.12,'#FFF0D2',gi*.34,'screen',18*px);
-    mkWash(ctx,map,f,.03,.28,.1,.34,0,'#FFF3DC',gi*.3,'screen',14*px);
-    mkWash(ctx,map,f,-.5,-.3,.22,.1,0,'#FFF3DC',gi*.22,'screen',12*px);
-    mkWash(ctx,map,f,.5,-.32,.22,.1,0,'#FFF3DC',gi*.22,'screen',12*px);
-    mkWash(ctx,map,f,.06,.55,.1,.05,0,'#FFF3DC',gi*.28,'screen',8*px);}
+    mkWash(ctx,map,f,-.6,.1,.34,.16,-.12,'#F7EDDA',gi*.34,'screen',18*px);
+    mkWash(ctx,map,f,.6,.08,.34,.16,.12,'#F7EDDA',gi*.34,'screen',18*px);
+    mkWash(ctx,map,f,.03,.28,.1,.34,0,'#F9F1E2',gi*.3,'screen',14*px);
+    mkWash(ctx,map,f,-.5,-.3,.22,.1,0,'#F9F1E2',gi*.22,'screen',12*px);
+    mkWash(ctx,map,f,.5,-.32,.22,.1,0,'#F9F1E2',gi*.22,'screen',12*px);
+    mkWash(ctx,map,f,.06,.55,.1,.05,0,'#F9F1E2',gi*.28,'screen',8*px);}
 }
 function mkGrainTile(){
   if(mkGrain)return mkGrain;
@@ -1502,7 +1956,7 @@ function mkFinish(ctx,src,W,H,o){
 function mkLook(){
   var L=state.look;
   return {lip:L.lip,eye:L.eye,blush:L.blush,glow:L.glow,found:L.found,
-    foundHex:'#E7B98F',liner:'#20160F'};
+    foundHex:'#D8BA9E',liner:'#1D1712'};
 }
 function renderMirror(){
   var cv=$('#mkCanvas'),st=$('#stageMirror');
@@ -1579,8 +2033,8 @@ function startTracking(){
 /* ================= capture & passport ================= */
 function drawVisageOn(cx,W,H){
   var g1=cx.createRadialGradient(W/2,H*.47,10,W/2,H*.47,W*.34);
-  g1.addColorStop(0,'#B27C52');g1.addColorStop(.55,'#8B5A3C');g1.addColorStop(1,'rgba(20,15,11,0)');
-  cx.fillStyle='#16110D';cx.fillRect(0,0,W,H);
+  g1.addColorStop(0,'#A27E62');g1.addColorStop(.55,'#8B5A3C');g1.addColorStop(1,'rgba(20,15,11,0)');
+  cx.fillStyle='#15110E';cx.fillRect(0,0,W,H);
   cx.fillStyle=g1;cx.fillRect(0,0,W,H);
 }
 function capture(){
@@ -1655,9 +2109,9 @@ function nearestName(c,table){
     var d=(rr-r)*(rr-r)+(gg-g)*(gg-g)+(bb-b)*(bb-b);if(d<bd){bd=d;best=t[1]}});
   return best;
 }
-var LIPN=[['#A8323C','Stunna 正红'],['#7E2E3A','Wine 酒红'],['#B4696B','Cocoa 豆沙'],['#B4565E','Rosewood'],['#C96C7E','Rosé 玫瑰'],['#D2603F','Coral 珊瑚'],['#7E3B52','Plum 梅子'],['#8E4A56','Berry 莓果'],['#B98A73','Nude 裸调'],['#C98A82','Peach'],['#9B6B7E','Mauve 雾紫'],['#A87E8E','Rose Chrome']];
-var EYEN=[['#5A4638','Smoke 烟熏'],['#4A3A2E','Espresso'],['#7A5A34','Bronze 古铜'],['#9A6A32','Gold 暖金'],['#6E5642','Taupe'],['#8A7080','Mauve Haze'],['#8E97AB','Chrome 铬光'],['#9AA0B0','Silver 银'],['#A6A0C0','Iris'],['#6E5260','Plum Ash'],['#B0885E','Sand']];
-var BLUSHN=[['#C86A5E','Summ3r'],['#E08A93','Rosé Pop'],['#D6906A','Peach'],['#E58A6A','Coral'],['#A86A6A','Rosewood'],['#C89AA0','Petal'],['#B0574F','Brick']];
+var LIPN=[['#A8323C','Stunna 正红'],['#703C44','Wine 酒红'],['#AC7173','Cocoa 豆沙'],['#A4666B','Rosewood'],['#B97C88','Rosé 玫瑰'],['#B96E58','Coral 珊瑚'],['#734656','Plum 梅子'],['#87515B','Berry 莓果'],['#B18D7B','Nude 裸调'],['#BD938E','Peach'],['#96707F','Mauve 雾紫'],['#A3838F','Rose Chrome']];
+var EYEN=[['#56473C','Smoke 烟熏'],['#473A31','Espresso'],['#6E5940','Bronze 古铜'],['#886944','Gold 暖金'],['#695647','Taupe'],['#87737F','Mauve Haze'],['#9198A8','Chrome 铬光'],['#9CA1AE','Silver 银'],['#A8A4BC','Iris'],['#6B5560','Plum Ash'],['#A78867','Sand']];
+var BLUSHN=[['#B67870','Summ3r'],['#D1999F','Rosé Pop'],['#C4957C','Peach'],['#D0947F','Coral'],['#A17171','Rosewood'],['#C39FA4','Petal'],['#A0655F','Brick']];
 function buildRecipe(L){
   var shade=state.identity?state.identity.shade:'330';
   var col=state.identity?state.identity.col:'#8B5A3C';
@@ -1667,7 +2121,7 @@ function buildRecipe(L){
     {zone:'腮红 Cheeks',x:.28,y:.55,name:'Cheeks Out 腮红',shade:nearestName(L.blush.c,BLUSHN),c:L.blush.c},
     {zone:'唇 Lips',x:.5,y:.72,name:'Icon Velvet 唇釉',shade:nearestName(L.lip.c,LIPN),c:L.lip.c}
   ];
-  if(L.glow>.5)r.push({zone:'高光 Glow',x:.72,y:.5,name:'Killawatt 高光',shade:'Champagne',c:'#F3E3BD'});
+  if(L.glow>.5)r.push({zone:'高光 Glow',x:.72,y:.5,name:'Killawatt 高光',shade:'Champagne',c:'#EADFC6'});
   return r;
 }
 function renderRecipe(){
@@ -1675,7 +2129,7 @@ function renderRecipe(){
   $('#recipeExpr').textContent=L.name;
   // face map
   var W=240,H=300, s='';
-  s+='<defs><radialGradient id="fmSkin" cx="50%" cy="45%" r="55%"><stop offset="0%" stop-color="#EAD8C4"/><stop offset="100%" stop-color="#D8C0A6"/></radialGradient></defs>';
+  s+='<defs><radialGradient id="fmSkin" cx="50%" cy="45%" r="55%"><stop offset="0%" stop-color="#E4D8CA"/><stop offset="100%" stop-color="#D0C0AE"/></radialGradient></defs>';
   s+='<ellipse cx="120" cy="150" rx="66" ry="92" fill="url(#fmSkin)" stroke="rgba(36,28,21,.16)"/>';
   s+='<path d="M92 122 q10 -8 20 0" stroke="rgba(36,28,21,.35)" stroke-width="2" fill="none"/>';
   s+='<path d="M128 122 q10 -8 20 0" stroke="rgba(36,28,21,.35)" stroke-width="2" fill="none"/>';
@@ -1683,9 +2137,9 @@ function renderRecipe(){
   s+='<path d="M120 150 l0 26" stroke="rgba(36,28,21,.18)" stroke-width="1.5" fill="none"/>';
   list.forEach(function(it,i){
     var x=it.x*W, y=it.y*H;
-    s+='<circle cx="'+x+'" cy="'+y+'" r="12" fill="'+it.c+'" stroke="#FFFDF8" stroke-width="2"/>';
+    s+='<circle cx="'+x+'" cy="'+y+'" r="12" fill="'+it.c+'" stroke="#FEFCF9" stroke-width="2"/>';
     s+='<circle cx="'+x+'" cy="'+y+'" r="17" fill="none" stroke="rgba(200,164,92,.5)" stroke-width="1" stroke-dasharray="2 3"/>';
-    s+='<text x="'+x+'" y="'+(y+4)+'" text-anchor="middle" font-family="Jost,sans-serif" font-size="12" fill="'+( it.c==='#F3E3BD'||it.zone.indexOf('底妆')===0?'#241C15':'#FFFDF8')+'">'+(i+1)+'</text>';
+    s+='<text x="'+x+'" y="'+(y+4)+'" text-anchor="middle" font-family="Jost,sans-serif" font-size="12" fill="'+( it.c==='#EADFC6'||it.zone.indexOf('底妆')===0?'#221C17':'#FEFCF9')+'">'+(i+1)+'</text>';
   });
   $('#faceMap').innerHTML=s;
   // list
@@ -1771,35 +2225,35 @@ var STORIES=[
   txt:'一支大胆的红唇，别的什么都不要。这就已经是全部。',
   cult:'French Red：法式审美里「一处着力」的哲学'}
 ];
+var STORY_AR=[.78,1,.72,.96,.82,.68];
 var feedRendered=false;
 function renderFeed(){
   var f=$('#storyFeed');f.innerHTML='';
   // user's shared looks first
   state.saved.filter(function(e){return e.shared}).forEach(function(e){
     var c=document.createElement('div');c.className='story';
-    c.innerHTML='<div class="story-top"><div class="ava" style="--a-c:'+(state.identity?state.identity.col:'#8B5A3C')+';--a-hi:#C8A45C"></div>'+
-      '<div><p class="n">你 · You</p><p class="m">刚刚 · Beauty Story</p></div></div>'+
-      '<div class="story-look"><img alt="" src="'+e.img+'"><span class="ln">'+e.name+'</span></div>'+
-      '<div class="story-body"><p class="story-txt">这是我在无限之镜里创作的「'+e.name+'」。今天，这就是我想表达的自己。</p></div>';
+    c.style.setProperty('--ar','.8');c.style.setProperty('--d','0ms');
+    c.innerHTML='<div class="story-look"><img alt="" src="'+e.img+'"><span class="ln">'+e.name+'</span></div>'+
+      '<div class="story-body"><blockquote class="story-txt">今天，这就是我想表达的自己。</blockquote></div>'+
+      '<div class="story-top"><div class="ava" style="--a-c:'+(state.identity?state.identity.col:'#8B5A3C')+';--a-hi:#B69E6E"></div>'+
+      '<div><p class="n">你 · You</p><p class="m">刚刚 · Beauty Story</p></div></div>';
     f.appendChild(c);
   });
   STORIES.forEach(function(s,idx){
     var c=document.createElement('div');c.className='story';
-    var hasOrig=s.orig?'<p class="story-orig">'+s.orig+'</p>':'';
-    c.innerHTML='<div class="story-top"><div class="ava" style="--a-c:'+s.ac+';--a-hi:'+s.ah+'"></div>'+
+    c.style.setProperty('--ar',String(STORY_AR[idx%STORY_AR.length]));
+    c.style.setProperty('--d',(60+idx*70)+'ms');
+    c.innerHTML='<div class="story-look" style="--l-skin:'+s.skin+';--l-hi:'+s.hi+';--l-lip:'+s.lip+'"><span class="ln">'+s.ln+'</span></div>'+
+      '<div class="story-body"><blockquote class="story-txt">'+s.txt+'</blockquote></div>'+
+      '<div class="story-top"><div class="ava" style="--a-c:'+s.ac+';--a-hi:'+s.ah+'"></div>'+
       '<div><p class="n">'+s.n+'</p><p class="m">'+s.m+'</p></div></div>'+
-      '<div class="story-look" style="--l-skin:'+s.skin+';--l-hi:'+s.hi+';--l-lip:'+s.lip+'"><span class="ln">'+s.ln+'</span></div>'+
-      '<div class="story-body">'+hasOrig+'<p class="story-txt">'+s.txt+'</p>'+
-      '<span class="cult">✦ 文化语境 · '+s.cult+'</span></div>'+
       '<div class="story-foot">'+
-        (s.orig?'<button data-op="orig">原文 / AI 翻译</button>':'')+
         '<button data-op="like">♡ 欣赏</button>'+
         '<button data-op="try">试试这个灵感</button></div>';
     f.appendChild(c);
     c.addEventListener('click',function(ev){
       var b=ev.target.closest('button');if(!b)return;
       var op=b.getAttribute('data-op');
-      if(op==='orig'){c.classList.toggle('showorig')}
       if(op==='like'){b.classList.toggle('liked');b.textContent=b.classList.contains('liked')?'♥ 已欣赏':'♡ 欣赏'}
       if(op==='try'){
         state.look.lip.c=s.lip;state.look.lip.i=Math.max(state.look.lip.i,.55);state.look.name=s.ln;
@@ -1822,6 +2276,36 @@ Promise.all([store.get('fenty-passport'),store.get('fenty-identity')]).then(func
   try{if(rs[1]){state.identity=JSON.parse(rs[1])}}catch(e){}
 });
 applyLook();
+})();
+</script>
+
+<script>
+/* 封面字标：随指针 / 手机倾斜改变视角与高光 */
+(function(){
+  var h=document.querySelector('.h3d'),hero=document.getElementById('sc-welcome');
+  if(!h||!hero)return;
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var raf=0,tx=0,ty=0;
+  function apply(){
+    raf=0;
+    h.style.setProperty('--ry',(tx*7).toFixed(2)+'deg');
+    h.style.setProperty('--rx',(8-ty*7).toFixed(2)+'deg');
+    h.style.setProperty('--gx',(-tx*48).toFixed(1)+'px');
+    h.style.setProperty('--gy',(-ty*30).toFixed(1)+'px');
+  }
+  function set(x,y){
+    tx=Math.max(-1,Math.min(1,x));ty=Math.max(-1,Math.min(1,y));
+    if(!raf)raf=requestAnimationFrame(apply);
+  }
+  hero.addEventListener('pointermove',function(e){
+    var r=hero.getBoundingClientRect();
+    set(((e.clientX-r.left)/r.width-.5)*2,((e.clientY-r.top)/r.height-.5)*2);
+  });
+  hero.addEventListener('pointerleave',function(){set(0,0)});
+  window.addEventListener('deviceorientation',function(e){
+    if(e.gamma==null&&e.beta==null)return;
+    set((e.gamma||0)/26,((e.beta||40)-40)/30);
+  });
 })();
 </script>
 </body>
